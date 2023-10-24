@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
-import avatar from '../../accets/images/avatar.webp'
-import {FlexContainer} from "../../Components/FlexContainer";
+import avatar from '../../../accets/images/avatar.webp'
+import {FlexContainer} from "../../../Components/FlexContainer";
 
 export const Main = () => {
     return (
