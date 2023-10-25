@@ -65,13 +65,17 @@ const Skills = () => {
                            '(MUI) чрезвычайно полезна. Я часто обращаюсь к ее использованию и стремлюсь полностью освоить ' +
                            'навыки создания компонентов с использованием MUI.'}/>
                 <Skill iconId={'jest'} skillTitle={'Jest'}
-                       description={'Lorem ipsum dolor sit amet, consectetur adipisicing elit, ' + 'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim'}/>
+                       description={'В своем процессе разработки я активно использую Jest. Этот инструмент помогает ' +
+                           'мне создавать надежные тесты для моего кода, что способствует уверенности в его работоспособности.' +
+                           'Я планирую углубить свои знания и использовать Jest в своей профессиональной деятельности, ' +
+                           'чтобы обеспечить высокое качество моего кода и улучшить опыт пользователей. '}/>
                 <Skill iconId={'figma'} skillTitle={'Figma'}
-                       description={'Lorem ipsum dolor sit amet, consectetur adipisicing elit, ' +
-                           'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim'}/>
+                       description={' Я активно использую Figma для верстки на основе дизайн-макетов.'}/>
                 <Skill iconId={'gitTeh'} skillTitle={'GitHub'}
-                       description={'Lorem ipsum dolor sit amet, consectetur adipisicing elit, ' +
-                           'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim'}/>
+                       description={'Гит - это еще один важный инструмент, который используется мной в процессе разработки. ' +
+                           'Я знаком с основными командами Git, такими как git clone, git pull, git push, git commit, ' +
+                           'git branch, и git merge. Эти команды позволяют мне управлять версиями моего кода ' +
+                           'и совместно работать с другими разработчиками. '}/>
 
             </FlexContainer>
         </StyledSkills>

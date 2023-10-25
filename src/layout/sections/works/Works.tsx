@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import {SectionTitle} from "../../../Components/SectionTitle";
-import {Menu} from "../../../Components/Menu/Menu";
+import {Menu} from "../../../Components/menu/Menu";
 import {FlexContainer} from "../../../Components/FlexContainer";
 import {Work} from "../../../Components/work/Work";
 

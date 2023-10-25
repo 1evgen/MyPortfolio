@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
-import {Menu} from "../../Components/Menu/Menu";
-import {Logo} from "../../Components/Logo/Logo";
+import {Menu} from "../../Components/menu/Menu";
+import {Logo} from "../../Components/logo/Logo";
 
 
 const headerItems = ['[', 'Home,', 'About me,', 'Tech Stack,', 'Projects,', 'Contacts', ']']
