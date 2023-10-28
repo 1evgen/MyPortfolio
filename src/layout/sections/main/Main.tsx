@@ -8,7 +8,7 @@ export const Main = () => {
         <StyledMain>
             <FlexContainer aline={'center'} justify={'space-around'}>
                 <BoxMain>
-                    <SayHello>Hi,there 👋</SayHello>
+                    <SayHello>Hi, there 👋</SayHello>
                     <Name>My name is</Name>
                     <Name>Evgenii</Name>
                     <MainTitle>I am Web developer</MainTitle>
@@ -26,7 +26,10 @@ const StyledMain = styled.div`
 `
 const BoxMain = styled.div``
 const MainTitle = styled.h1``
-const SayHello = styled.span``
+const SayHello = styled.span`
+    font-family: GoodTime;
+    font-size: 1rem;
+`
 const Name = styled.span``
 
 

@@ -1,13 +1,14 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: GoodTime;
+  src: url("/src/accets/fonts/GoodTimesRg-Regular.eot?") format('eot'),
+       url("/src/accets/fonts/GoodTimesRg-Regular.ttf") format('truetype'),
+       url("/src/accets/fonts/GoodTimesRg-Regular.woff2") format('woff2');
+       font-style: normal;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+    font-family: Monofonto;
+    src: url("/src/accets/fonts/Monofonto-Regular.ttf") format('truetype'),
+    url("/src/accets/fonts/Monofonto-Regular.woff2") format('woff2');
+    font-style: normal;
 }
