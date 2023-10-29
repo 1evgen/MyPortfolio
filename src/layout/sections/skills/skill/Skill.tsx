@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import {Icon} from "../../../../Components/icon/Icon";
+import {Test} from "../Test";
 
 type SkillPropsType = {
     iconId: string
@@ -12,7 +13,9 @@ type SkillPropsType = {
 export const Skill = ({iconId, skillTitle,description}: SkillPropsType) => {
     return (
         <StyledSkill>
-            <Icon iconId={iconId}/>
+            <Test >
+                <Icon iconId={iconId}  width={'45'} height={'40'}/>
+            </Test>
             <SkillTitle>{skillTitle}</SkillTitle>
             <SkillText>{description}</SkillText>
         </StyledSkill>
@@ -27,11 +30,13 @@ export const StyledSkill = styled.div`
   border: 1px solid #f88a0e;
   box-shadow: 0px 0px 10px #e35420;
   padding: 10px;
+  position: relative;
   
   display: flex;
   flex-direction: column;
   align-items: center;
   box-sizing: border-box; 
+  
 `
 
 export const SkillTitle = styled.h3`
@@ -51,3 +56,5 @@ export const SkillText = styled.p`
   word-break: break-word;
   hyphens: auto;
 `
+
+

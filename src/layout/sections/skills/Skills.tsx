@@ -3,14 +3,17 @@ import styled from "styled-components";
 import {FlexContainer} from "../../../Components/FlexContainer";
 import {SectionTitle} from "../../../Components/SectionTitle";
 import {Skill} from "./skill/Skill";
+import {Test} from "./Test";
 
 
 export const Skills = () => {
     return (
         <StyledSkills>
             <SectionTitle>My skills</SectionTitle>
+
             <FlexContainer wrap={'wrap'} justify={'space-between'}>
-                <Skill iconId={'html'} skillTitle={'HTML'}
+
+                <Skill  iconId={'html'} skillTitle={'HTML'}
                        description={'HTML is one of those elements in web development that I got acquainted with during ' +
                            'the early stages of my programming journey. I use HTML to create the foundation of web pages, ' +
                            'and I\'m confident in my ability to produce clean, semantically valid HTML code. I\'m familiar' +
@@ -50,7 +53,8 @@ export const Skills = () => {
                            description={'When creating my educational projects, I initially used CSS modules. However, ' +
                                'after trying Styled-Components, it completely changed my perspective on styling ' +
                                'components in React. I appreciate the convenience and expressiveness that Styled-Components' +
-                               ' provide. I also value the ability to use powerful CSS features such as nesting and props to create more flexible and dynamic interfaces.'}/>
+                               ' provide. I also value the ability to use powerful CSS features such as nesting and props ' +
+                               'to create more flexible and dynamic interfaces.'}/>
                            <Skill iconId={'storybook'} skillTitle={'Storybook'}
                            description={'I\'m very pleased to have had the opportunity to get acquainted with Storybook. ' +
                                'I consider it a very useful tool for documenting and testing components. ' +
@@ -59,7 +63,8 @@ export const Skills = () => {
                                'with various questions related to working with this tool.'}/>
                            <Skill iconId={'mui'} skillTitle={'Material UI'}
                            description={'I enjoy creating styles on my own, but I acknowledge that the Material-UI (MUI)' +
-                               ' library is extremely useful. I often turn to using it and aim to fully master the skills of creating components using MUI.'}/>
+                               ' library is extremely useful. I often turn to using it and aim to fully master the ' +
+                               'skills of creating components using MUI.'}/>
                            <Skill iconId={'jest'} skillTitle={'Jest'}
                            description={'I actively use Jest in my development process. This tool helps me create reliable' +
                                ' tests for my code, which contributes to confidence in its functionality. ' +

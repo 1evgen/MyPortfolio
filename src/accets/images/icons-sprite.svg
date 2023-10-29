@@ -108,7 +108,7 @@
         </g>
         <defs>
             <clipPath id="clip0_6_7784">
-                <rect width="58.2524" height="88.9906" fill="white" transform="translate(0.492615 0.669922)"/>
+                <rect width="50.2524" height="88.9906" fill="white" transform="translateX(0.492615 0.669922)"/>
             </clipPath>
         </defs>
 
