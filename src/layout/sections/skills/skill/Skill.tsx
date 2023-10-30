@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import {Icon} from "../../../../Components/icon/Icon";
-import {Test} from "../Test";
+import {DisplayLevels} from "../Test";
 
 type SkillPropsType = {
     iconId: string
@@ -14,9 +14,9 @@ type SkillPropsType = {
 export const Skill = ({iconId, skillTitle,description, level}: SkillPropsType) => {
     return (
         <StyledSkill>
-            <Test level={level} >
+            <DisplayLevels level={level} >
                 <Icon iconId={iconId}  width={'45'} height={'40'}/>
-            </Test>
+            </DisplayLevels>
             <SkillTitle>{skillTitle}</SkillTitle>
             <SkillText>{description}</SkillText>
         </StyledSkill>

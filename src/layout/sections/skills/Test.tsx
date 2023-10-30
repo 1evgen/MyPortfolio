@@ -6,30 +6,36 @@ type propsType = {
     level: number
 }
 
-export const Test = (props: propsType)=> {
-    return (
-
-        <StyledPanelLevel>
-            <WrapperSkill >
-            <IconPosition>{props.children}</IconPosition>
-            </WrapperSkill>
-            <Level id={'item_1'}></Level>
-            <Level id={'item_2'}></Level>
-            <Level id={'item_3'}></Level>
-            <Level id={'item_4'}></Level>
-            <Level id={'item_5'}></Level>
-            <Level id={'item_6'}></Level>
-            <Level id={'item_7'}></Level>
-            <Level id={'item_8'}></Level>
-            <Level id={'item_9'}></Level>
-            <Level id={'item_10'}></Level>
-            <Level id={'item_11'}></Level>
-            <Level id={'item_12'}></Level>
-        </StyledPanelLevel>
-
-    )
+const StyleLevels = {
+    backgroundImage: 'radial-gradient(circle closest-side at 5px 7px, rgb(255 103 57), rgb(179 208 230 / 76%))',
+    filter:' blur(0.3px)',
+    boxShadow: '0px 0px 5px orangered inset, 0px 0px 15px orange, 0px 0px 7px #ff2600',
 }
 
+
+export const DisplayLevels = (props: propsType) => {
+    const levelStyles = Array.from({ length: 12 }, (_, i) => {
+        if (i < props.level) {
+            return { ...StyleLevels };
+        }
+        return {};
+    });
+
+    return (
+        <StyledPanelLevel>
+            <WrapperSkill>
+                <IconPosition>{props.children}</IconPosition>
+            </WrapperSkill>
+            {Array.from({ length: 12 }, (_, i) => (
+                <Level
+                    key={i}
+                    id={`item_${i}`}
+                    style={levelStyles[i]}
+                />
+            ))}
+        </StyledPanelLevel>
+    );
+};
 
 const StyledPanelLevel = styled.div`
   position: relative;
@@ -58,13 +64,16 @@ const WrapperSkill = styled.div`
     color: rgb(22 137 151 / 58%);
     background-color: rgba(156, 173, 234, 0.34);
     backdrop-filter: blur(.6px);
-    box-shadow: 1px 1px 20px #f19fd1;
+    //box-shadow: 1px 1px 20px #f19fd1;
     z-index: 1;
 
     overflow: hidden;
     
   }
 `
+
+
+
 
 const IconPosition = styled.div`
     position: absolute;
@@ -80,9 +89,7 @@ const Level = styled.div`
   position: absolute;
   border-radius: 2px;
   background-color: rgba(165, 188, 236, 0.73);
-
-
-    
+  
   }
   
   ${(props) =>
@@ -171,12 +178,10 @@ const Level = styled.div`
     
   `}
   ${(props) =>
-          props.id === "item_12" && `
+          props.id === "item_0" && `
         transform: rotate(360deg);
         bottom: 81%;
         right: 45%; 
   `}
-
-
 `
 
