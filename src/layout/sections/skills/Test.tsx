@@ -3,13 +3,14 @@ import React from "react";
 
 type propsType = {
     children: React.ReactNode;
+    level: number
 }
 
 export const Test = (props: propsType)=> {
     return (
 
         <StyledPanelLevel>
-            <WrapperSkill>
+            <WrapperSkill >
             <IconPosition>{props.children}</IconPosition>
             </WrapperSkill>
             <Level id={'item_1'}></Level>
@@ -31,46 +32,69 @@ export const Test = (props: propsType)=> {
 
 
 const StyledPanelLevel = styled.div`
-    position: relative;
-    border-radius: 50%;
-    border: 2px double white;
-    width: 100px;
-    height: 100px;
-  
-  
+  position: relative;
+  border-radius: 50%;
+  border: 3px solid #5b4646;
+  width: 100px;
+  height: 100px;
+
+ 
+
 `
 
 const WrapperSkill = styled.div`
-    position: relative;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    display: inline-block;
+    content: '';
+    width: 60px;
+    height: 60px;
+    transform: translate(16px, 16px);
+    border-radius: 50%;
+    border: 4px solid;
     
+    color: rgb(22 137 151 / 58%);
+    background-color: rgba(156, 173, 234, 0.34);
+    backdrop-filter: blur(.6px);
+    box-shadow: 1px 1px 20px #f19fd1;
+    z-index: 1;
+
+    overflow: hidden;
+    
+  }
 `
 
 const IconPosition = styled.div`
     position: absolute;
-    left: 30%;
+    left: 28%;
     transform: translateY(30px);
 `
 
 
-
 const Level = styled.div`
-    border: 1px solid  white;
-    width: 10px;
-    height: 18px;
-    position: absolute;
-    border-radius: 2px;
+  border: 1px solid white;
+  width: 10px;
+  height: 18px;
+  position: absolute;
+  border-radius: 2px;
+  background-color: rgba(165, 188, 236, 0.73);
+
+
     
-  background-color: orangered;
+  }
   
   ${(props) =>
           props.id === "item_1" &&
           `
-        top: 5%;
+        top: 4%;
         left: 65%;
         transform: translateX(-50%);
         transform: rotate(30deg);
+        
   `}
-  
+
   ${(props) =>
           props.id === "item_2" &&
           `
@@ -89,7 +113,7 @@ const Level = styled.div`
           props.id === "item_4" &&
           `
       top: 60%;
-    right: 10%;
+    right: 8%;
   transform: translateY(-50%);
   transform: rotate(120deg);
 
@@ -98,22 +122,22 @@ const Level = styled.div`
           props.id === "item_5" &&
           `
         transform: rotate(150deg);
-        bottom: 5%;
-        right: 25%;;
+        bottom: 3%;
+        right: 23%;;
   `}
   ${(props) =>
           props.id === "item_6" &&
           `
            transform: rotate(180deg);
-        bottom: 0%;
-        right: 45%;
+        bottom: -3%;
+        right: 44%;
     
   `}
   ${(props) =>
           props.id === "item_7" &&
           `
     transform: rotate(210deg);
-    bottom: 5%;
+    bottom: 3%;
     right: 65%;
     
   `} ${(props) =>
@@ -149,10 +173,10 @@ const Level = styled.div`
   ${(props) =>
           props.id === "item_12" && `
         transform: rotate(360deg);
-        bottom: 80%;
+        bottom: 81%;
         right: 45%; 
   `}
-  
-  
+
+
 `
 

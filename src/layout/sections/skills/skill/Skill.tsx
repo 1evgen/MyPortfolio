@@ -7,13 +7,14 @@ type SkillPropsType = {
     iconId: string
     skillTitle: string
     description: string
-
+    level: number
 }
 
-export const Skill = ({iconId, skillTitle,description}: SkillPropsType) => {
+
+export const Skill = ({iconId, skillTitle,description, level}: SkillPropsType) => {
     return (
         <StyledSkill>
-            <Test >
+            <Test level={level} >
                 <Icon iconId={iconId}  width={'45'} height={'40'}/>
             </Test>
             <SkillTitle>{skillTitle}</SkillTitle>
@@ -23,20 +24,32 @@ export const Skill = ({iconId, skillTitle,description}: SkillPropsType) => {
 };
 
 export const StyledSkill = styled.div`
-  width: 30%;
-  background-color: #1c2a2c;
+  width: 44%;
+  background-color: rgba(28, 42, 44, 0.41);
   margin: 10px;
   border-radius: 12px;
   border: 1px solid #f88a0e;
   box-shadow: 0px 0px 10px #e35420;
   padding: 10px;
   position: relative;
-  
+
+
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-sizing: border-box; 
-  
+
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #f88a0e;
+    box-shadow: 0px 0px 10px #e35420;
+    z-index: -1; /* Разместите линии под фоном */
+  }
 `
 
 export const SkillTitle = styled.h3`
