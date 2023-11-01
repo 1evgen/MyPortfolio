@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import {Icon} from "../../../../Components/icon/Icon";
-import {DisplayLevels} from "../Test";
+import {DisplayLevels} from "../DisplayLevels";
 
 type SkillPropsType = {
     iconId: string

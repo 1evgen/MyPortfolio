@@ -21,7 +21,7 @@ export const Main = () => {
 
 const StyledMain = styled.div`
   min-height: 100vh;
-  background-color: #dad3ac;
+  background-color: #0c0c15;
 
 `
 const BoxMain = styled.div``
@@ -30,7 +30,8 @@ const SayHello = styled.span`
     font-family: GoodTime;
     font-size: 1rem;
 `
-const Name = styled.span``
+const Name = styled.span`
+`
 
 
 
@@ -40,6 +41,7 @@ const Photo = styled.img`
   height: 300px;
   object-fit: cover;
   border-radius: 50%;
-  border: 2px solid #1e1e1e;
+  border: 2px solid #b96e22;
+margin-top: 30px;
 `
 

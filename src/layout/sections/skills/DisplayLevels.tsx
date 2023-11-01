@@ -18,7 +18,6 @@ export const DisplayLevels = (props: propsType) => {
         if (i < props.level) {
             return { ...StyleLevels };
         }
-        return {};
     });
 
     return (

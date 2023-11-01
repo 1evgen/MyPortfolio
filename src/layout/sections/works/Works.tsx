@@ -30,7 +30,7 @@ export const Works = () => {
 
 export const StyledWorks = styled.section`
   min-height: 100vh;
-  background-color: coral;
+
 
   
 `

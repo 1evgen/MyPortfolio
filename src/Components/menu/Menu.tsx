@@ -19,7 +19,10 @@ const StyleMenu = styled.nav`
       display: flex;
       gap: 15px;
       list-style-type: none;
-    
+     
+      
     }
+  
+ 
         
 `

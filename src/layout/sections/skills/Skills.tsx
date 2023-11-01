@@ -26,7 +26,7 @@ export const Skills = () => {
                            'responsive and cross-browser websites, ensuring they look great on both mobile devices and ' +
                            'computers. Additionally, I am continuously exploring new CSS capabilities, such as animations ' +
                            'and transformations, to create interactive and appealing elements on web pages.'}/>
-                <Skill level={9} iconId={'js'} skillTitle={'JavaScript'}
+                <Skill level={10} iconId={'js'} skillTitle={'JavaScript'}
                        description={"I've been studying JavaScript for over a year now and during this time, " +
                            "I've delved into various aspects of the language, including asynchronous programming, " +
                            "closures, prototype-based inheritance, and object-oriented programming in JavaScript. " +
@@ -34,20 +34,20 @@ export const Skills = () => {
                            "I enjoy digging into books and articles to gain a deeper understanding of how JS works. " +
                            "I'm always ready to take on new challenges and tasks related to this language."}/>
 
-                <Skill level={6} iconId={'ts'} skillTitle={'TypeScript'}
+                <Skill level={7} iconId={'ts'} skillTitle={'TypeScript'}
                        description={'In modern development, it\'s hard to imagine working without TypeScript. ' +
                            'All my projects are developed using TypeScript, and it truly helps improve code quality and ' +
                            'simplifies the process of finding and fixing errors. Additionally, TypeScript is of great ' +
                            'interest to me, as it offers an excellent opportunity to delve deeper into the principles ' +
                            'of object-oriented programming (OOP), which may not always be fully realized in JavaScript.'}/>
-                           <Skill level={7} iconId={'react'} skillTitle={'React'}
+                           <Skill level={9} iconId={'react'} skillTitle={'React'}
                            description={'React was the first framework I got acquainted with, and I really enjoyed ' +
                                'developing applications on this platform. One of the key advantages of React is its focus ' +
                                'on functional programming, making it more accessible to beginner developers. React is one ' +
                                'of the most popular frameworks, and thanks to that, I can find numerous solutions and ' +
                                'ideas for my projects. I also actively use various libraries and tools built on top of ' +
                                'React, such as React Router, Formik, React Icons, and many others.'}/>
-                           <Skill level={7} iconId={'redux'} skillTitle={'Redux'}
+                           <Skill level={9} iconId={'redux'} skillTitle={'Redux'}
                            description={'In my projects, I decided to use the Redux state manager. I already have experience ' +
                                'with React Redux, and I\'m currently actively learning Redux Toolkit. This tool allows me to more' +
                                ' efficiently manage the state of applications and simplifies the development process.'}/>
