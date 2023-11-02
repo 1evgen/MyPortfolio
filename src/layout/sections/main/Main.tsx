@@ -1,7 +1,8 @@
 import React from 'react';
-import styled from "styled-components";
+import styled, {css, keyframes} from "styled-components";
 import avatar from '../../../accets/images/avatar.webp'
 import {FlexContainer} from "../../../Components/FlexContainer";
+import {theme} from "../../../styles/theme";
 
 export const Main = () => {
     return (
@@ -32,8 +33,6 @@ const SayHello = styled.span`
 `
 const Name = styled.span`
 `
-
-
 
 
 const Photo = styled.img`

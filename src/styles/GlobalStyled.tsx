@@ -26,6 +26,7 @@ export const GlobalStyle = createGlobalStyle`
     
     a{
       text-decoration: none;
+     
     }
 
     ul{
@@ -37,7 +38,12 @@ export const GlobalStyle = createGlobalStyle`
       border: none;
     }
     
-    
+    :root{
+      --base-color: 60;
+      --color1-light:  hsla(var(--base-color1), 50%, 75%, 100%);
+      --color1-normal: hsla(var(--base-color1), 50%, 50%, 100%);
+      --color1-darker: hsla(var(--base-color1), 50%, 35%, 100%);
+    }
  
     
 `
