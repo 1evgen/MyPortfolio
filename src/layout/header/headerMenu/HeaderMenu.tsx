@@ -50,17 +50,8 @@ const  CloseBracket = styled.div`
 `
 
 const ListItem = styled.li`
-  
-   
+    
 `
-
-// const Link = styled.a`
-//     font-family: Monofonto, sans-serif;
-//     color: ${theme.colors.font};
-//     text-shadow: ${theme.colors.fontShadow};
-//     font-size: 20px;
-//
-// `
 
 const glitchBeforeKeyframes = keyframes`
   ${createGlitchKeyframes()}

@@ -6,6 +6,7 @@ type PropsType ={
     justify?: string
     aline?: string
     wrap?: string
+    height?: string
 }
 
 
@@ -15,5 +16,6 @@ export const FlexContainer = styled.div<PropsType>`
     justify-content: ${props => props.justify || 'flex-start'};
     align-items: ${props => props.aline || 'stretch'};
     flex-wrap: ${props => props.wrap || 'nowrap'};
+    height: ${props => props.height || '' };
 `
 

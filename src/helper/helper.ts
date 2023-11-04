@@ -1,3 +1,4 @@
+import styled from "styled-components";
 
 export const createGlitchKeyframes = () => {
     const steps = 30;
@@ -15,3 +16,17 @@ export const createGlitchKeyframes = () => {
 
     return keyframes;
 };
+
+
+const randomPosition = () => {
+    const left = Math.random() * 100;
+    const top = Math.random() * 100;
+    const rotation = Math.random() * 360;
+
+    return `
+    left: ${left}%;
+    top: ${top}%;
+    transform: rotate(${rotation}deg);
+  `;
+};
+

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import {Logo} from "../../Components/logo/Logo";
-import {Container} from "../../Components/Container";
+import {ContainerBlock} from "../../Components/Container";
 import {FlexContainer} from "../../Components/FlexContainer";
 import {HeaderMenu} from "./headerMenu/HeaderMenu";
 
@@ -11,13 +11,13 @@ const headerItems = ['Home,', 'About me,', 'Tech Stack,', 'Projects,', 'Contacts
 export const Header = () => {
     return (
         <StyleHeader>
-            <Container>
+            <ContainerBlock>
                 <FlexContainer justify={'space-between'} aline={'center'}>
                     <Logo/>
                     <HeaderMenu menuItems={headerItems} />
                 </FlexContainer>
 
-            </Container>
+            </ContainerBlock>
         </StyleHeader>
     );
 };
