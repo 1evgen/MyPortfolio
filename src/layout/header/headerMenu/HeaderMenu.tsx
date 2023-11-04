@@ -45,7 +45,7 @@ const OpenBracket =  styled.div`
 `
 const  CloseBracket = styled.div`
     position: absolute;
-    bottom: -24px;
+    bottom: -25px;
     right: 10px;
 `
 
@@ -77,7 +77,8 @@ const Link = styled.a<{ item: string }>`
   font-size: 20px;
   font-weight: 600;
   position: relative;
-
+  
+  
   &::after, &::before {
     content: ${(props) => `"${props.item}"`};
     position: absolute;
@@ -101,6 +102,40 @@ const Link = styled.a<{ item: string }>`
     animation: ${glitchAfterKeyframes} 2s linear 0s infinite alternate-reverse;
   }
 
+  
+  &:hover{
+    &::after,
+    &::before {
+      animation: none;
+      display: none;
+    }
+
+    transition: color .5s, text-shadow 0.3s;
+
+    color: #17c417; /* Новый цвет */
+    text-shadow: 2px 2px 10px #1d751d; /* Новая тень */
+    
+    
+    @keyframes work {
+      from {
+        color: #124b00;
+
+      }
+      to {
+        color:  #17c417; ;
+
+      }
+
+      from {
+        text-shadowlor: none
+
+      }
+      to {
+        text-shadow: 2px 2px 10px #1d751d;
+      }
+
+    }
+  }
   
 `
 
