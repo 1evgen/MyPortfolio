@@ -6,6 +6,7 @@ import {Works} from "./layout/sections/works/Works";
 import {Contact} from "./layout/sections/contacts/Contact";
 import {Slogan} from "./layout/sections/slogan/Slogan";
 import {Footer} from "./layout/footer/Footer";
+import {Gears} from "./Components/gear/Gears";
 
 
 
@@ -19,6 +20,7 @@ function App() {
             <Contact />
             <Slogan />
             <Footer />
+
         </div>
     );
 }

@@ -5,6 +5,7 @@ import {FlexContainer} from "../../../Components/FlexContainer";
 import {ContainerBlock} from "../../../Components/Container";
 import {theme} from "../../../styles/theme";
 import {Icon} from "../../../Components/icon/Icon";
+import {Gears} from "../../../Components/gear/Gears";
 
 
 
@@ -16,9 +17,7 @@ export const Main = () => {
 
             <ContainerBlock>
             <FlexContainer wrap={'wrap'} aline={'center'} justify={'space-between'} height={'100vh'}>
-                <StyledIcon iconId={'gear'} />
-                {/*<Icon iconId={'gear'} width={'120px'} height={'80px'}/>*/}
-
+              <Gears />
                 <BoxMain>
                     <SayHello>Hi, there </SayHello>
                     <Name>I am  Evgenii</Name>
@@ -44,22 +43,6 @@ export const Main = () => {
     );
 };
 
-const rotateAnimation = keyframes`
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-`;
-
-const StyledIcon = styled(Icon)`
-  transform-origin: center;
-  animation: ${rotateAnimation} 2s linear infinite;
-`
-
-
-
 
 
 const StyledMain = styled.div`
@@ -68,8 +51,6 @@ const StyledMain = styled.div`
   display: flex;
 
 `
-
-
 
 
 const ContentAboutMe = styled.div`
