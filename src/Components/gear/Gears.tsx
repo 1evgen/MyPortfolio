@@ -20,8 +20,8 @@ const ContainerGears = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  top: 20%;
-  right: 89%;
+  top: 2%;
+  right: 91%;
 `
 
 const rotateFirstGear = keyframes`

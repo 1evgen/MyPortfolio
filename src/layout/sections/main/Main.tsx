@@ -5,7 +5,11 @@ import {FlexContainer} from "../../../Components/FlexContainer";
 import {ContainerBlock} from "../../../Components/Container";
 import {theme} from "../../../styles/theme";
 import {Gears} from "../../../Components/gear/Gears";
-import {HolographicDisplay} from "../../../Components/holographicDisplay/HolographicDisplay";
+import {
+
+    AdditionalDesign,
+    HolographicDisplay
+} from "../../../Components/holographicDisplay/HolographicDisplay";
 
 
 {/*<BoxMain>*/}
@@ -31,18 +35,21 @@ export const Main = () => {
         <StyledMain>
             <ContainerBlock>
 
-            <FlexContainer  direction={'column'} justify={'center'} aline={'center'} height={'100vh'}>
+            <FlexContainer  position={'relative'} direction={'column'} justify={'center'} aline={'center'} height={'100vh'}>
                 <Gears/>
                 <HolographicDisplay>
+                    <AdditionalDesign></AdditionalDesign>
                     <FlexContainer  justify={'space-between'} aline={'center'}>
                     <BoxMain>
                         <SayHello>Hi, there. I am  Evgenii </SayHello>
                         <MainTitle>I am Web developer</MainTitle>
                     </BoxMain>
+
                     <Photo src={avatar} alt='avatar'/>
                     </FlexContainer>
                 </HolographicDisplay>
             </FlexContainer>
+
 
             </ContainerBlock>
 
