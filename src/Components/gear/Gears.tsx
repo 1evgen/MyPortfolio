@@ -4,24 +4,24 @@ import {theme} from "../../styles/theme";
 export const Gears = ()=> {
     return (
         <ContainerGears>
-            <Gear>
-
-            </Gear>
-
-            <GearSecond>
-
-
-            </GearSecond>
+            <Gear></Gear>
+            <GearSecond></GearSecond>
         </ContainerGears>
     )
 }
 
 const ContainerGears = styled.div`
-    position: relative;
-    width: 20%;
-    border: 1px solid red;
-    padding: 10px;
-  
+  position: absolute;
+  width: 150px;
+  //height: 100%;
+  max-width: 15%;
+  //max-height: 22%;
+  //padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  top: 20%;
+  right: 89%;
 `
 
 const rotateFirstGear = keyframes`
@@ -54,7 +54,7 @@ const Gear = styled.div`
   max-width: 50px;
   min-height: 50px;
 
-
+  height: 1.6em;
   border-radius: 50%;
   background-color: ${theme.styleGears.colorBody};
   margin: 0 auto;
@@ -89,7 +89,9 @@ const Gear = styled.div`
     top: 25%;
     right: 25%;
     z-index: 2;
-
+    box-shadow: ${theme.styleGears.shadowFire};
+    
+    
   }
 
 `

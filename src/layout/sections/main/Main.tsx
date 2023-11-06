@@ -1,41 +1,49 @@
 import React from 'react';
-import styled, {css, keyframes} from "styled-components";
+import styled from "styled-components";
 import avatar from '../../../accets/images/avatarMain.webp'
 import {FlexContainer} from "../../../Components/FlexContainer";
 import {ContainerBlock} from "../../../Components/Container";
 import {theme} from "../../../styles/theme";
-import {Icon} from "../../../Components/icon/Icon";
 import {Gears} from "../../../Components/gear/Gears";
+import {HolographicDisplay} from "../../../Components/holographicDisplay/HolographicDisplay";
 
 
+{/*<BoxMain>*/}
+{/*    <SayHello>Hi, there </SayHello>*/}
+{/*    <Name>I am  Evgenii</Name>*/}
+{/*    <MainTitle>I am Web developer</MainTitle>*/}
+{/*</BoxMain>*/}
+
+
+{/*<ContentAboutMe>*/}
+
+{/*    I am a motivated front-end developer, passionately dedicated to the world of web technologies.*/}
+{/*    My passion for creating beautiful and interactive user interfaces has led me to front-end development,*/}
+{/*    and I always strive to improve my skills in this field. I enjoy working with modern frameworks and libraries,*/}
+{/*    crafting visually appealing web applications, and ensuring user satisfaction through a high-quality user experience.*/}
+{/*    I am in search of new challenges and opportunities for growth in the world of web development.*/}
+{/*</ContentAboutMe>*/}
 
 
 export const Main = () => {
 
     return (
         <StyledMain>
-
             <ContainerBlock>
-            <FlexContainer wrap={'wrap'} aline={'center'} justify={'space-between'} height={'100vh'}>
-              <Gears />
-                <BoxMain>
-                    <SayHello>Hi, there </SayHello>
-                    <Name>I am  Evgenii</Name>
-                    <MainTitle>I am Web developer</MainTitle>
-                </BoxMain>
 
-                <Photo src={avatar} alt='avatar'/>
-                <ContentAboutMe>
-                    I am just a computer program, lacking a physical body or consciousness. My purpose is...
-                    I am a motivated front-end developer, passionately dedicated to the world of web technologies.
-                    My passion for creating beautiful and interactive user interfaces has led me to front-end development,
-                    and I always strive to improve my skills in this field. I enjoy working with modern frameworks and libraries,
-                    crafting visually appealing web applications, and ensuring user satisfaction through a high-quality user experience.
-                    I am in search of new challenges and opportunities for growth in the world of web development.
-
-                </ContentAboutMe>
-
+            <FlexContainer  direction={'column'} justify={'center'} aline={'center'} height={'100vh'}>
+                <Gears/>
+                <HolographicDisplay>
+                    <FlexContainer  justify={'space-between'} aline={'center'}>
+                    <BoxMain>
+                        <SayHello>Hi, there. I am  Evgenii </SayHello>
+                        <MainTitle>I am Web developer</MainTitle>
+                    </BoxMain>
+                    <Photo src={avatar} alt='avatar'/>
+                    </FlexContainer>
+                </HolographicDisplay>
             </FlexContainer>
+
             </ContainerBlock>
 
         </StyledMain>
@@ -45,18 +53,20 @@ export const Main = () => {
 
 
 
+
+
 const StyledMain = styled.div`
-  min-height: 100vh;
+  height: 100vh;
   background-color: #0c0c15;
   display: flex;
-
+  align-items: center;
 `
 
 
 const ContentAboutMe = styled.div`
   max-width: 450px;
   clip-path: polygon(100% 0, 105% 70%, 73% 115%, 0 102%, 0 0);
-
+  
   color: darkgreen;
   padding: 15px;
   background-color: #13181e;
@@ -74,6 +84,7 @@ const ContentAboutMe = styled.div`
 
 
 const BoxMain = styled.div`
+  
   background-image: linear-gradient(orange,orangered);
   color: transparent;
   -webkit-background-clip: text;
@@ -81,8 +92,11 @@ const BoxMain = styled.div`
   
   display: flex;
   flex-direction: column;
-  gap: 5px
+  justify-content: center;
+  gap: 25px
 `
+
+
 
 
 
@@ -98,17 +112,17 @@ const SayHello = styled.span`
 
 `
 
-const Name = styled.span`
-`
-
 
 
 const Photo = styled.img`
-  width: 280px;
-  height: 280px;
+
+  width: 200px;
+  height: 200px;
   object-fit: cover;
 
   border: 2px solid #2f2f2f;
-  margin-top: 30px;
+
+  
+  
 `
 
