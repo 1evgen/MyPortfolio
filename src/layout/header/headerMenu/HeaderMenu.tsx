@@ -103,8 +103,8 @@ const Link = styled.a<{ item: string }>`
 
     transition: color .5s, text-shadow 0.3s;
 
-    color: #17c417; /* Новый цвет */
-    text-shadow: 2px 2px 10px #1d751d; /* Новая тень */
+    color: #17c417;
+    text-shadow: 2px 2px 10px #1d751d;
     
     
     @keyframes work {
@@ -118,7 +118,7 @@ const Link = styled.a<{ item: string }>`
       }
 
       from {
-        text-shadowlor: none
+        text-shadow: none
 
       }
       to {

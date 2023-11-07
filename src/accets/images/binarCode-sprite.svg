@@ -1,6 +1,6 @@
 
 
-<svg width="120" height="119"  stroke="green" viewBox="0 0 120 119"   xmlns="http://www.w3.org/2000/svg">
+<svg id="test" opacity="1" width="120" height="119"  stroke="green" viewBox="0 0 120 119"   xmlns="http://www.w3.org/2000/svg">
 <g id="n">
     <text x="10" y="30" font-size="24" font-family="Arial" >1101110</text>
 </g>
