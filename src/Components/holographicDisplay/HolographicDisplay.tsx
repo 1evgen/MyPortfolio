@@ -1,31 +1,25 @@
-import styled from "styled-components";
+import styled, {css, keyframes} from "styled-components";
 
 type PropsType = {
     width?: string
     height?: string
-    live?: string
-
+    isActive: boolean
 }
 
 
-
-
 export const HolographicDisplay = styled.div<PropsType>`
-  clip-path: polygon(0 10%,0 0,100% 0,100% 100%,0 99%,0 22%,2% 24%,1% 10%);
+  position: relative;
+  //clip-path: polygon(0 10%,0 0,100% 0,100% 100%,0 99%,0 22%,2% 24%,1% 10%);
   //clip-path: polygon(0 10%,0 0,100% 0,100% 100%,0 100%,0 24%,1% 24%,1% 10%);
   width: 100%;
   max-width: 50%;
-  //clip-path: polygon(1% 11%, 0 11%, 0 0, 100% 0, 100% 100%, 85% 100%, 85% 97%, 65% 97%, 65% 100%, 0 100%, 0 24%, 1% 24%);
-  //clip-path: polygon(0 10%, 0 0, 100% 0, 100% 100%, 0 100%, 0 24%, 4% 24%, 1% 10%);
+  clip-path: polygon(0 10%, 0 0, 100% 0, 100% 100%, 0 100%, 0 24%, 4% 24%, 1% 10%);
   padding: 15px;
   background-color: rgba(28, 42, 44, 0.41);
   min-height: 310px;
-  position: relative;
   z-index: 3;
-
   
   &::before {
-
     content: '';
     display: inline-block;
     width: 100%;
@@ -43,7 +37,6 @@ export const HolographicDisplay = styled.div<PropsType>`
   }
 
   &::after {
-   
     content: '';
     display: inline-block;
     position: absolute;
@@ -53,40 +46,52 @@ export const HolographicDisplay = styled.div<PropsType>`
     width: 24%;
     height: 3%;
     background-color: #0c0c15;
-    
+  }
+`
+
+const effect = keyframes`
+  0% {
+    background-color: #0c1f0c;
   }
 
+  100% {
+    background-color: #0cff0c;
+  }
 `
 
 
-export const AdditionalDesign = styled.div`
-  width: 50%;
-  display: inline-block;
-  background-color: rgba(72,108,72,0.17);
-  border: 2px dotted rgb(115 124 0 / 60%);
-  position: absolute;
-  top: 153px;
-  left: 217px;
-  z-index: 3;
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
+export const AdditionalDesign = styled.div<PropsType>`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   
-  &::after{
-    
+  background-color: rgba(72, 108, 72, 0.17);
+  border: 1px solid rgb(115 124 0 / 60%);
+  position: absolute;
+  z-index: 3;
+
+  width: 20%;
+  top: 217px;
+  left: 385px;
+  height: 15%;
+
+
+  &::after {
+
     content: '';
-    width: 10px;
-    height: 10px;
-    background-color: #0c0c15;
+    width: 5px;
+    height: 5px;
+    filter: blur(.5px);
+    background-color: rgba(11, 28, 11, 0.9);
     display: inline-block;
     border-radius: 50%;
     position: absolute;
     
-    left: 275px;
-    transform: translateY(-219px);
-  }
-  
-  
+    top: 3px;
+    left: 2px;
+    animation: ${({isActive})=> isActive ?  css`${effect} 0.8s infinite` : 'none'}
+
 `
 
 

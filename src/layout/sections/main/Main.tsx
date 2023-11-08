@@ -1,17 +1,13 @@
-import React, {ChangeEvent, useState} from 'react';
+import React, {useState} from 'react';
 import styled from "styled-components";
 import avatar from '../../../accets/images/avatarMain.webp'
 import {FlexContainer} from "../../../Components/FlexContainer";
 import {ContainerBlock} from "../../../Components/Container";
 import {theme} from "../../../styles/theme";
 import {Gears} from "../../../Components/gear/Gears";
-import {
-
-    AdditionalDesign,
-    HolographicDisplay
-} from "../../../Components/holographicDisplay/HolographicDisplay";
+import {AdditionalDesign, HolographicDisplay} from "../../../Components/holographicDisplay/HolographicDisplay";
 import {SwitcherAnimation} from "../../../Components/switcher/SwitcherAnimation";
-import {FoneSvg} from "../../../Components/test/FoneSvg";
+import {BackgroundMain} from "../../../Components/test/BackgroundMain";
 
 
 {/*<BoxMain>*/}
@@ -68,20 +64,18 @@ const backgroundStyled = [
     {id: 34, letter: 'n', top: '25%', left: '87%', rotate: '100'}
 ]
 
+
 export const Main = () => {
+
     const [isActive, setActive] = useState(false)
+    const onChangeAnimation = () => setActive(!isActive)
 
-    const onChangeAnimation = ()=> {
-        setActive(!isActive)
 
-    }
     return (
         <StyledMain>
-
             <ContainerBlock>
-
                 {
-                    backgroundStyled.map((el)=> <FoneSvg
+                    backgroundStyled.map((el)=> <BackgroundMain
                             key={el.id}
                             fill={'#124b00'}
                             rotate={`${el.rotate}deg`}
@@ -93,11 +87,10 @@ export const Main = () => {
                     )}
 
             <FlexContainer  position={'relative'} direction={'column'} justify={'center'} aline={'center'} height={'100vh'}>
-
                 <Gears  isActive={isActive}/>
-
-                <HolographicDisplay>
-                    <AdditionalDesign> <SwitcherAnimation isActive={isActive} setAnimations={onChangeAnimation}/>
+                <HolographicDisplay isActive={isActive} >
+                    <AdditionalDesign isActive={isActive} >
+                        <SwitcherAnimation isActive={isActive} setAnimations={onChangeAnimation}></SwitcherAnimation>
                     </AdditionalDesign>
                     <FlexContainer  justify={'space-between'} aline={'center'}>
                     <BoxMain>
@@ -110,16 +103,11 @@ export const Main = () => {
                 </HolographicDisplay>
 
             </FlexContainer>
+
             </ContainerBlock>
-
         </StyledMain>
-
     );
 };
-
-
-
-
 
 const StyledMain = styled.div`
   height: 100vh;
@@ -128,8 +116,6 @@ const StyledMain = styled.div`
   align-items: center;
   position: relative;
 `
-
-
 
 const ContentAboutMe = styled.div`
   max-width: 450px;
@@ -148,8 +134,6 @@ const ContentAboutMe = styled.div`
   hyphens: auto;
 `
 
-
-
 const BoxMain = styled.div`
   background-image: linear-gradient(orange,orangered);
   color: transparent;
@@ -166,22 +150,21 @@ const BoxMain = styled.div`
 const MainTitle = styled.h1`
   font-family: GoodTime;
   font-size: 1.5rem;
-
 `
 
 const SayHello = styled.span`
     font-family: GoodTime;
     font-size: 1rem;
-
 `
 
 
 const Photo = styled.img`
-
   width: 200px;
   height: 200px;
   object-fit: cover;
   border: 2px solid #2f2f2f;
+
+  
   
 `
 
