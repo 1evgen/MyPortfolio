@@ -9,11 +9,10 @@ type PropsType = {
 
 export const HolographicDisplay = styled.div<PropsType>`
   position: relative;
-  //clip-path: polygon(0 10%,0 0,100% 0,100% 100%,0 99%,0 22%,2% 24%,1% 10%);
+  clip-path: polygon(0 10%,0 0,100% 0,100% 100%,0 99%,0 22%,2% 24%,1% 10%);
   //clip-path: polygon(0 10%,0 0,100% 0,100% 100%,0 100%,0 24%,1% 24%,1% 10%);
   width: 100%;
   max-width: 50%;
-  clip-path: polygon(0 10%, 0 0, 100% 0, 100% 100%, 0 100%, 0 24%, 4% 24%, 1% 10%);
   padding: 15px;
   background-color: rgba(28, 42, 44, 0.41);
   min-height: 310px;

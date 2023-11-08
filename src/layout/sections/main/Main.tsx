@@ -3,28 +3,12 @@ import styled from "styled-components";
 import avatar from '../../../accets/images/avatarMain.webp'
 import {FlexContainer} from "../../../Components/FlexContainer";
 import {ContainerBlock} from "../../../Components/Container";
-import {theme} from "../../../styles/theme";
 import {Gears} from "../../../Components/gear/Gears";
 import {AdditionalDesign, HolographicDisplay} from "../../../Components/holographicDisplay/HolographicDisplay";
 import {SwitcherAnimation} from "../../../Components/switcher/SwitcherAnimation";
 import {BackgroundMain} from "../../../Components/test/BackgroundMain";
 
 
-{/*<BoxMain>*/}
-{/*    <SayHello>Hi, there </SayHello>*/}
-{/*    <Name>I am  Evgenii</Name>*/}
-{/*    <MainTitle>I am Web developer</MainTitle>*/}
-{/*</BoxMain>*/}
-
-
-{/*<ContentAboutMe>*/}
-
-{/*    I am a motivated front-end developer, passionately dedicated to the world of web technologies.*/}
-{/*    My passion for creating beautiful and interactive user interfaces has led me to front-end development,*/}
-{/*    and I always strive to improve my skills in this field. I enjoy working with modern frameworks and libraries,*/}
-{/*    crafting visually appealing web applications, and ensuring user satisfaction through a high-quality user experience.*/}
-{/*    I am in search of new challenges and opportunities for growth in the world of web development.*/}
-{/*</ContentAboutMe>*/}
 
 
 const backgroundStyled = [
@@ -117,22 +101,6 @@ const StyledMain = styled.div`
   position: relative;
 `
 
-const ContentAboutMe = styled.div`
-  max-width: 450px;
-  clip-path: polygon(100% 0, 105% 70%, 73% 115%, 0 102%, 0 0);
-  color: darkgreen;
-  padding: 15px;
-  background-color: #13181e;
-  border-left: 2px solid #ff4d00;
-
-  
-  font-family: Monofonto;
-  color: ${theme.colors.font};
-  text-shadow: ${theme.colors.fontShadow};
-  text-align: justify;
-  word-break: break-word;
-  hyphens: auto;
-`
 
 const BoxMain = styled.div`
   background-image: linear-gradient(orange,orangered);

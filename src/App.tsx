@@ -7,14 +7,16 @@ import {Contact} from "./layout/sections/contacts/Contact";
 import {Slogan} from "./layout/sections/slogan/Slogan";
 import {Footer} from "./layout/footer/Footer";
 import {Gears} from "./Components/gear/Gears";
+import {AboutMe} from "./layout/sections/aboutMe/AboutMe";
 
 
 
 function App() {
     return (
         <div className="App">
-            <Header />
+                <Header />
                 <Main />
+                <AboutMe/>
                 <Skills/>
                 <Works />
                 <Contact />
