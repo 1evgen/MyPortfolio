@@ -6,7 +6,6 @@ import {Works} from "./layout/sections/works/Works";
 import {Contact} from "./layout/sections/contacts/Contact";
 import {Slogan} from "./layout/sections/slogan/Slogan";
 import {Footer} from "./layout/footer/Footer";
-import {Gears} from "./Components/gear/Gears";
 import {AboutMe} from "./layout/sections/aboutMe/AboutMe";
 
 
