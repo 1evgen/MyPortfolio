@@ -18,14 +18,14 @@ type PropsType = {
 
 export const BackgroundMain = ({iconId, width, height, viewBox, fill, rotate, left ,top, isActive}: PropsType) => {
     return (
+
 <Test isActive={isActive} top={top}  left={ left} rotate={rotate}>
         <svg width={width || '50'}
              height={height || '50'}
              viewBox={viewBox || "0 0 120 119"}
              fill={fill}
              xmlns="http://www.w3.org/2000/svg">
-
-                    <use fill={fill} xlinkHref={`${binaryIcons}#${iconId}`}></use>
+              <use fill={fill} xlinkHref={`${binaryIcons}#${iconId}`}></use>
         </svg>
 </Test>
     );

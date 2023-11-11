@@ -7,7 +7,7 @@ type propsType = {
 }
 
 const StyleLevels = {
-    backgroundImage: 'radial-gradient(circle closest-side at 5px 7px, rgb(255 103 57), rgb(179 208 230 / 76%))',
+    backgroundImage: 'radial-gradient(circle closest-side at 4px 6px, rgb(255 103 57), rgb(179 208 230 / 76%))',
     filter:' blur(0.3px)',
     boxShadow: '0px 0px 5px orangered inset, 0px 0px 15px orange, 0px 0px 7px #ff2600',
 }
@@ -76,7 +76,8 @@ const WrapperSkill = styled.div`
 
 const IconPosition = styled.div`
     position: absolute;
-    left: 28%;
+    top: -2px;
+    left: 27.5%;
     transform: translateY(30px);
 `
 
@@ -94,7 +95,7 @@ const Level = styled.div`
   ${(props) =>
           props.id === "item_1" &&
           `
-        top: 4%;
+        top: 6%;
         left: 65%;
         transform: translateX(-50%);
         transform: rotate(30deg);
@@ -118,24 +119,24 @@ const Level = styled.div`
   ${(props) =>
           props.id === "item_4" &&
           `
-      top: 60%;
-    right: 8%;
-  transform: translateY(-50%);
-  transform: rotate(120deg);
+        top: 60%;
+        right: 10%;
+        transform: translateY(-50%);
+        transform: rotate(120deg);
 
   `}
   ${(props) =>
           props.id === "item_5" &&
           `
         transform: rotate(150deg);
-        bottom: 3%;
-        right: 23%;;
+            bottom: 6%;
+            right: 25%;
   `}
   ${(props) =>
           props.id === "item_6" &&
           `
            transform: rotate(180deg);
-        bottom: -3%;
+        bottom: 0%;
         right: 44%;
     
   `}
@@ -143,7 +144,7 @@ const Level = styled.div`
           props.id === "item_7" &&
           `
     transform: rotate(210deg);
-    bottom: 3%;
+    bottom: 5%;
     right: 65%;
     
   `} ${(props) =>
@@ -158,13 +159,13 @@ const Level = styled.div`
           `
         transform: rotate(270deg);
         bottom: 40%;
-        right: 85%;  
+        right: 86%;  
   `}
   ${(props) =>
           props.id === "item_10" &&
           `
            transform: rotate(300deg);
-    bottom: 60%;
+    bottom: 63%;
     right: 80%;
     
   `}
@@ -172,14 +173,14 @@ const Level = styled.div`
           props.id === "item_11" &&
           `
          transform: rotate(330deg);
-    bottom: 75%;
+    bottom: 77%;
     right: 65%; 
     
   `}
   ${(props) =>
           props.id === "item_0" && `
         transform: rotate(360deg);
-        bottom: 81%;
+        bottom: 82%;
         right: 45%; 
   `}
 `

@@ -29,9 +29,7 @@ export const AboutMe = () => {
 
 const SectionAboutMe = styled.div`
   background-color: #0c0c15;
-
 `
-
 
 const WrapperDisplay = styled.div`
   width: 100%;
@@ -45,7 +43,6 @@ const WrapperDisplay = styled.div`
 
   display: flex;
   justify-content: center;
-  align-items: center;
   padding: 15px;
   position: relative;
   border-radius: 0px 20px 0px 20px;
@@ -128,8 +125,4 @@ const ContentAboutMe = styled.div`
     border-bottom: 2px solid deepskyblue;
     
   }
-
-
-
-
 `

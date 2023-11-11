@@ -3,6 +3,7 @@ import styled from "styled-components";
 import {FlexContainer} from "../../../Components/FlexContainer";
 import {SectionTitle} from "../../../Components/SectionTitle";
 import {Skill} from "./skill/Skill";
+import {ContainerBlock} from "../../../Components/Container";
 
 
 
@@ -11,10 +12,9 @@ import {Skill} from "./skill/Skill";
 export const Skills = () => {
     return (
         <StyledSkills>
+            <ContainerBlock>
             <SectionTitle>My skills</SectionTitle>
-
             <FlexContainer wrap={'wrap'} justify={'space-around'} aline={'centre'} >
-
                 <Skill level={8}  iconId={'html'} skillTitle={'HTML'}
                        description={'HTML is one of those elements in web development that I got acquainted with during ' +
                            'the early stages of my programming journey. I use HTML to create the foundation of web pages, ' +
@@ -26,7 +26,7 @@ export const Skills = () => {
                            'responsive and cross-browser websites, ensuring they look great on both mobile devices and ' +
                            'computers. Additionally, I am continuously exploring new CSS capabilities, such as animations ' +
                            'and transformations, to create interactive and appealing elements on web pages.'}/>
-                <Skill level={10} iconId={'js'} skillTitle={'JavaScript'}
+                <Skill level={10} iconId={'IconTest'} skillTitle={'JavaScript'}
                        description={"I've been studying JavaScript for over a year now and during this time, " +
                            "I've delved into various aspects of the language, including asynchronous programming, " +
                            "closures, prototype-based inheritance, and object-oriented programming in JavaScript. " +
@@ -81,6 +81,7 @@ export const Skills = () => {
                                ' These commands enable me to manage versions of my code and collaborate with other developers.'}/>
 
             </FlexContainer>
+            </ContainerBlock>
         </StyledSkills>
     );
 };
@@ -91,5 +92,5 @@ export const Skills = () => {
 const StyledSkills = styled.section`
   background-color: #0c0c15;
   min-height: 100vh;
-  
+ 
 `

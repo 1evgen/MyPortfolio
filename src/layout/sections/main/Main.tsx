@@ -58,6 +58,9 @@ export const Main = () => {
     return (
         <StyledMain>
             <ContainerBlock>
+
+
+            <FlexContainer  position={'relative'} direction={'column'} justify={'center'} aline={'center'} height={'100vh'}>
                 {
                     backgroundStyled.map((el)=> <BackgroundMain
                             key={el.id}
@@ -69,8 +72,6 @@ export const Main = () => {
                             left={el.left}
                         />
                     )}
-
-            <FlexContainer  position={'relative'} direction={'column'} justify={'center'} aline={'center'} height={'100vh'}>
                 <Gears  isActive={isActive}/>
                 <HolographicDisplay isActive={isActive} >
                     <AdditionalDesign isActive={isActive} >
