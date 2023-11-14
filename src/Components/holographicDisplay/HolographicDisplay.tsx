@@ -18,6 +18,7 @@ export const HolographicDisplay = styled.div<PropsType>`
   min-height: 310px;
   z-index: 3;
   
+  
   &::before {
     content: '';
     display: inline-block;

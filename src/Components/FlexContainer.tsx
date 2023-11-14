@@ -21,5 +21,6 @@ export const FlexContainer = styled.div<PropsType>`
     height: ${props => props.height || '' };
     gap: ${props => props.gap || ''};
     position: ${props => props.position || ''};
+    
 `
 

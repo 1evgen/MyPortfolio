@@ -17,7 +17,7 @@ export const Skill = ({iconId, skillTitle,description, level}: SkillPropsType) =
         <StyledSkill>
             <FlexContainer justify={'space-between'} aline={'center'}>
 
-            <FlexContainer direction={'column-reverse'} justify={'space-between'} aline={'center'} gap={'40px'} >
+            <FlexContainer direction={'column-reverse'} justify={'space-between'} aline={'flex-start'} gap={'40px'} >
                 <SkillTitle>{skillTitle}</SkillTitle>
             <DisplayLevels level={level} >
                 <Icon iconId={iconId}  width={'45'} height={'40'}/>
@@ -72,38 +72,34 @@ const WindowInfo = styled.div`
   width: 320px;
   height: 200px;
   padding: 20px;
-
+  max-width: 290px;
 
   &::-webkit-scrollbar {
     width: 3px;
-
   }
-
   &::-webkit-scrollbar-track {
     background-color: #423c3c;
     height: 12px;
     width: 12px;
   }
-
   &::-webkit-scrollbar-thumb {
     background-image: linear-gradient(orange,orangered);
     background-color: #ff2f00;
     border-radius: 3px;
     display: inline-block;
     height: 10px;
-
   }
 `
-
 
 export const SkillText = styled.p`
   font-family: Monofonto;
   color: #17c417;
   text-align: justify;
   text-shadow: 2px 2px 10px #1d751d;
+  white-space: pre-line;
   word-break: break-word;
   hyphens: auto;
-  
+
 
 `
 
