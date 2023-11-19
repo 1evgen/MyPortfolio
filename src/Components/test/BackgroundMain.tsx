@@ -19,7 +19,7 @@ type PropsType = {
 export const BackgroundMain = ({iconId, width, height, viewBox, fill, rotate, left ,top, isActive}: PropsType) => {
     return (
 
-<Test isActive={isActive} top={top}  left={ left} rotate={rotate}>
+<BinaryNumber isActive={isActive} top={top}  left={ left} rotate={rotate}>
         <svg width={width || '50'}
              height={height || '50'}
              viewBox={viewBox || "0 0 120 119"}
@@ -27,7 +27,7 @@ export const BackgroundMain = ({iconId, width, height, viewBox, fill, rotate, le
              xmlns="http://www.w3.org/2000/svg">
               <use fill={fill} xlinkHref={`${binaryIcons}#${iconId}`}></use>
         </svg>
-</Test>
+</BinaryNumber>
     );
 };
 
@@ -65,7 +65,7 @@ const rotateBackground = keyframes`
 `;
 
 
-const Test = styled.div<PropsType>`
+const BinaryNumber = styled.div<PropsType>`
   position: absolute;
   transform: rotate(${props => props.rotate});
   

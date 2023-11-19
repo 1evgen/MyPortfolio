@@ -7,6 +7,7 @@ import {Gears} from "../../../Components/gear/Gears";
 import {AdditionalDesign, HolographicDisplay} from "../../../Components/holographicDisplay/HolographicDisplay";
 import {SwitcherAnimation} from "../../../Components/switcher/SwitcherAnimation";
 import {BackgroundMain} from "../../../Components/test/BackgroundMain";
+import {EyeSvg} from "../../../accets/SVGComponent/EyeSvg";
 
 
 
@@ -45,7 +46,12 @@ const backgroundStyled = [
     {id: 31,letter: 'h', top: '45%', left: '85%', rotate: '0'},
     {id: 32,letter: 'n', top: '55%', left: '17%', rotate: '48'},
     {id: 33,letter: 'n', top: '65%', left: '85%', rotate: '90'},
-    {id: 34, letter: 'n', top: '25%', left: '87%', rotate: '100'}
+    {id: 34, letter: 'n', top: '25%', left: '87%', rotate: '100'},
+    {id: 35, letter: 'zero', top: '2%', left: '20%', rotate: '122'},
+    {id: 36, letter: 'zero', top: '74%', left: '30%', rotate: '233'},
+    {id: 37, letter: 'zero', top: '84%', left: '2%', rotate: '180'},
+    {id: 38, letter: 'zero', top: '2%', left: '95%', rotate: '90'},
+    {id: 39, letter: 'zero', top: '35%', left: '0%', rotate: '145'},
 ]
 
 
@@ -58,7 +64,6 @@ export const Main = () => {
     return (
         <StyledMain>
             <ContainerBlock>
-
 
             <FlexContainer  position={'relative'} direction={'column'} justify={'center'} aline={'center'} height={'100vh'}>
                 {
@@ -82,8 +87,11 @@ export const Main = () => {
                         <SayHello>Hi, there. I am  Evgenii </SayHello>
                         <MainTitle>I am Web developer</MainTitle>
                     </BoxMain>
+                        <Photo src={avatar} alt='avatar'/>
+                        <WrapperPhotoElement >
+                             <EyeSvg isActive={isActive} />
+                        </WrapperPhotoElement>
 
-                    <Photo src={avatar} alt='avatar'/>
                     </FlexContainer>
                 </HolographicDisplay>
 
@@ -125,6 +133,16 @@ const SayHello = styled.span`
     font-family: GoodTime;
     font-size: 1rem;
 `
+
+const WrapperPhotoElement =  styled.div`
+  position: absolute;
+  left: 83.8%;
+  top: 28%;
+  
+
+`
+
+
 
 
 const Photo = styled.img`

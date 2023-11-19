@@ -46,6 +46,8 @@
 <g id="d">
 <text x="10" y="30" font-size="24" font-family="Arial">1100100</text>
 </g>
-
+    <g id="zero">
+        <text x="10" y="30" font-size="24" font-family="Arial">00100000</text>
+    </g>
 
 </svg>

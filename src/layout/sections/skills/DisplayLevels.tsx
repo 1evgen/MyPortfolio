@@ -82,6 +82,7 @@ const IconPosition = styled.div`
 `
 
 
+
 const Level = styled.div`
   border: 1px solid white;
   width: 10px;
@@ -91,7 +92,8 @@ const Level = styled.div`
   background-color: rgba(165, 188, 236, 0.73);
   
   }
-  
+
+
   ${(props) =>
           props.id === "item_1" &&
           `

@@ -3,6 +3,7 @@ import styled from "styled-components";
 import {theme} from "../../../styles/theme";
 import {ContainerBlock} from "../../../Components/Container";
 import {FlexContainer} from "../../../Components/FlexContainer";
+import {SectionTitle} from "../../../Components/SectionTitle";
 
 
 
@@ -11,7 +12,9 @@ export const AboutMe = () => {
         <SectionAboutMe>
 
         <ContainerBlock>
-            <FlexContainer  justify={'center'} aline={'center'} height={'75vh'} >
+
+            <FlexContainer direction={'column'} justify={'center'} aline={'center'} height={'75vh'} gap={'50px'}>
+            <SectionTitle>About me</SectionTitle>
                 <WrapperDisplay>
         <ContentAboutMe>
         I am a motivated front-end developer, passionately dedicated to the world of web technologies.
@@ -105,7 +108,7 @@ const ContentAboutMe = styled.div`
     height: 10%;
     display: inline-block;
     position: absolute;
-        color: #fd3b00;
+    color: #fd3b00;
     top: -8%;
     left: -4.2%;
     border-left: 2px solid;
