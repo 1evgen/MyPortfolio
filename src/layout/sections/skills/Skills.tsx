@@ -13,8 +13,9 @@ export const Skills = () => {
     return (
         <StyledSkills>
             <ContainerBlock>
-            <SectionTitle>My skills</SectionTitle>
+                <SectionTitle>My skills</SectionTitle>
             <FlexContainer wrap={'wrap'} justify={'space-around'} aline={'centre'} >
+
                 <Skill level={8}  iconId={'html'} skillTitle={'HTML'}
                        description={'HTML is one of those elements in web development that I got acquainted with during ' +
                            'the early stages of my programming journey. I use HTML to create the foundation of web pages, ' +

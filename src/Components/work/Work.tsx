@@ -22,8 +22,8 @@ export const Work = ({title, text, img}: PropsType) => {
 
 const StyledWork = styled.div`
   background-color: #8d2626;
-  max-width: 500px;
-
+  max-width: 350px;
+  border: 1px solid aliceblue;
 `
 
 const ImageProject = styled.img`
@@ -34,6 +34,8 @@ const ImageProject = styled.img`
 const Link = styled.a`
 `
 const Title = styled.h3`
+    
 `
 const Text = styled.p`
+    
 `

@@ -15,6 +15,7 @@ export const Menu = ({menuItems}:PropsType) => {
 };
 
 const StyleMenu = styled.nav`
+
     ul{
       display: flex;
       gap: 15px;

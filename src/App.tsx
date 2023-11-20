@@ -7,6 +7,8 @@ import {Contact} from "./layout/sections/contacts/Contact";
 import {Slogan} from "./layout/sections/slogan/Slogan";
 import {Footer} from "./layout/footer/Footer";
 import {AboutMe} from "./layout/sections/aboutMe/AboutMe";
+import {Test} from "./layout/sections/works/test/Test";
+
 
 function App() {
     return (
@@ -18,6 +20,7 @@ function App() {
                 <Works />
                 <Contact />
                 <Slogan />
+            <Test title={'HTML'}/>
                 <Footer />
 
 

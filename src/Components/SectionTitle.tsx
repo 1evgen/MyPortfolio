@@ -1,6 +1,12 @@
 import styled from "styled-components";
+import {theme} from "../styles/theme";
 
 export const SectionTitle = styled.h2`
-  color: rebeccapurple;
+  font-family: GoodTime;
+  background-image: linear-gradient(orange,orangered);
+  color: transparent;
+  -webkit-background-clip: text;
+  text-shadow: 1px 1px 5px crimson;
   text-align: center;
+  margin: 20px 0;
 `

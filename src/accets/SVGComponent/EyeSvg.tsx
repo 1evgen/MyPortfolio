@@ -75,6 +75,6 @@ const fireEye = keyframes`
 const WrapperEye = styled.div<{isActive: boolean}>`
 position: absolute;
   opacity: ${(props) => (props.isActive ? "1" : "0")};
-  transition: opacity 1s 5s ease; /* задержка перехода */
+  transition: opacity 5s ease; /* задержка перехода */
   
 `

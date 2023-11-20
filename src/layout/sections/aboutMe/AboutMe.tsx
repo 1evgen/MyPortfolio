@@ -12,9 +12,9 @@ export const AboutMe = () => {
         <SectionAboutMe>
 
         <ContainerBlock>
-
-            <FlexContainer direction={'column'} justify={'center'} aline={'center'} height={'75vh'} gap={'50px'}>
             <SectionTitle>About me</SectionTitle>
+            <FlexContainer direction={'column'} justify={'center'} aline={'center'} height={'75vh'} gap={'30px'}>
+
                 <WrapperDisplay>
         <ContentAboutMe>
         I am a motivated front-end developer, passionately dedicated to the world of web technologies.

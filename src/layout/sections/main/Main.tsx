@@ -59,8 +59,6 @@ export const Main = () => {
 
     const [isActive, setActive] = useState(false)
     const onChangeAnimation = () => setActive(!isActive)
-
-
     return (
         <StyledMain>
             <ContainerBlock>

@@ -17,6 +17,7 @@ export const GlobalStyle = createGlobalStyle`
       margin: 0;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
+      line-height: 1.2;
     }
 
   section {
@@ -38,6 +39,22 @@ export const GlobalStyle = createGlobalStyle`
       border: none;
     }
     
+    p {
+      font-family: Monofonto;
+      color: #17c417;
+      text-align: justify;
+      text-shadow: 2px 2px 10px #1d751d;
+      white-space: pre-line;
+      word-break: break-word;
+      -webkit-hyphens: auto;
+      -moz-hyphens: auto;
+      -ms-hyphens: auto;
+      hyphens: auto;
+    }
+   
+    section{
+      padding: 20px 0;
+    }
     :root{
       --base-color: 60;
       --color1-light:  hsla(var(--base-color1), 50%, 75%, 100%);
@@ -45,5 +62,6 @@ export const GlobalStyle = createGlobalStyle`
       --color1-darker: hsla(var(--base-color1), 50%, 35%, 100%);
     }
  
+   
     
 `
