@@ -8,7 +8,7 @@ type PropsType = {
 }
 
 
-export const Work = ({title, text, img}: PropsType) => {
+export const _Work = ({title, text, img}: PropsType) => {
     return (
         <StyledWork>
             <ImageProject src={img}/>

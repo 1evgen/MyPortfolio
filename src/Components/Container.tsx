@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+interface IPropsContainer {
+
+}
+
 export const ContainerBlock = styled.div`
   max-width: 1230px;
   width: 100%;

@@ -1,15 +1,9 @@
 import React from 'react';
 import styled from "styled-components";
 import {SectionTitle} from "../../../Components/SectionTitle";
-import {Menu} from "../../../Components/menu/Menu";
 import {FlexContainer} from "../../../Components/FlexContainer";
-import {Work} from "../../../Components/work/Work";
-import watcher from '../../../accets/projectImages/clock.webp'
-import calculator from '../../../accets/projectImages/counter.webp'
-import counter from '../../../accets/projectImages/Image.webp'
 import {ContainerBlock} from "../../../Components/Container";
-
-const projectItems = ['All','Landing page', 'Learn projects', 'pet projects' ]
+import {Work} from "./test/Work";
 
 
 export const Works = () => {
@@ -18,19 +12,14 @@ export const Works = () => {
             <ContainerBlock>
                 <FlexContainer direction={'column'} justify={'center'} aline={'center'} gap={'10px'} >
         <SectionTitle>My Works</SectionTitle>
-        <Menu menuItems={projectItems}/>
                 </FlexContainer>
-            <FlexContainer justify={'space-around'} >
-                <Work title={'counter'} img={counter}  text={'This is sample project description' +
-                    ' random things are here in description ' +
-                    'This is sample project lorem ipsum generator for dummy content'}/>
-                <Work title={'watch'} img={watcher}  text={'This is sample project description' +
-                    ' random things are here in description ' +
-                    'This is sample project lorem ipsum generator for dummy content'}/>
-                <Work title={'calculator'} img={calculator}  text={'This is sample project description' +
-                    ' random things are here in description ' +
-                    'This is sample project lorem ipsum generator for dummy content'}/>
+            <FlexContainer justify={'space-around'}  wrap={'wrap'} gap={'20px'}>
+                <Work title={'Calculator'} linkGit={''} linkPreview={''} />
+                <Work title={'Watch'} linkGit={'https://github.com/1evgen/advanced_watch'} linkPreview={'https://1evgen.github.io/advanced_watch/'}/>
+                <Work title={'Counter'} linkGit={''} linkPreview={''}/>
+                <Work title={'Counter'} linkGit={''} linkPreview={''}/>
             </FlexContainer>
+
             </ContainerBlock>
         </StyledWorks>
     );
