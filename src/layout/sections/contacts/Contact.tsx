@@ -13,7 +13,6 @@ export const Contact = () => {
         <SectionTitle>Contacts</SectionTitle>
             <StyledForm>
                 <CustomInput idLabel={'name'} placeholder={'Enter your name'}/>
-                {/*<Field placeholder={'name'}></Field>*/}
                 <Field placeholder={'subject'}></Field>
                 <Field as={'textarea'} placeholder={'message'}></Field>
                 <Button type={'submit'}>Send message</Button>
