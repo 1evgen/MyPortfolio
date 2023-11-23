@@ -5,6 +5,7 @@ import {theme} from "../styles/theme";
 interface IInputOwnType {
     idLabel: string
     placeholder: string
+    type?: string
 }
 
 
@@ -13,16 +14,16 @@ export const CustomInput = (props: IInputOwnType) => {
     const onChangeHandler = (e: ChangeEvent<HTMLInputElement>)=> setValue(e.target.value)
 
 
-    const {idLabel, placeholder} = props
+    const {idLabel, placeholder,type} = props
     return (
         <ContainerInput isValue={hasValue} >
             <Field
                    onChange={onChangeHandler}
                    value={hasValue}
-                   type={"text"}
+                   type={type}
                    id={idLabel}
                    placeholder={placeholder}></Field>
-            <Label htmlFor={idLabel}  isValue={hasValue}>Name</Label>
+            <Label htmlFor={idLabel}  isValue={hasValue}>{idLabel}</Label>
         </ContainerInput>
     );
 };
@@ -44,8 +45,8 @@ const ContainerInput = styled.div<{ isValue: string }>`
       opacity: 1;
     }
   }
-  
-  
+ 
+
 `
 
 const Field = styled.input`
@@ -56,20 +57,26 @@ const Field = styled.input`
   background-color: #13181e;
   outline: none;
   color: ${theme.colors.font};
- 
+
   
   &::placeholder {
     font-size: 16px;
     opacity: 0;
     
   }
-  
     &:focus-within{
         &::placeholder{
           opacity: 1;
         }
     }
   
+  &:-webkit-autofill {
+    -webkit-text-fill-color: ${theme.colors.font} !important;
+    border: 2px solid rgba(24, 26, 24, 0.07) !important;
+    -webkit-background-clip: text;
+    transition: background-color 5000s ease-in-out 0s;
+    box-shadow: inset 0 0 20px 20px #23232329;
+  }
 `
 
 const Label = styled.label<{ isValue: string}>`

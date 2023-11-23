@@ -11,10 +11,10 @@ export const Contact = () => {
         <StyledContacts>
             <ContainerBlock>
         <SectionTitle>Contacts</SectionTitle>
-            <StyledForm>
-                <CustomInput idLabel={'name'} placeholder={'Enter your name'}/>
-                <Field placeholder={'subject'}></Field>
-                <Field as={'textarea'} placeholder={'message'}></Field>
+            <StyledForm autoComplete= {'off'}>
+                <CustomInput  idLabel={'name'} placeholder={'Enter your name'} type={'name'} />
+                <CustomInput idLabel={'email'} placeholder={'Enter your email'} type={'email'}/>
+                <CustomInput idLabel={'message'} placeholder={'message'} type={'textarea'}/>
                 <Button type={'submit'}>Send message</Button>
             </StyledForm>
             </ContainerBlock>
@@ -38,10 +38,3 @@ const StyledForm = styled.form`
     margin: 0 auto;
 `
 
-const Field = styled.input`
-    width: 100%;
-    background-color: #13181e;
-    border: 1px solid red;
-    color: red;
-    border-radius: 2px 0px 2px 0px; 
-`
