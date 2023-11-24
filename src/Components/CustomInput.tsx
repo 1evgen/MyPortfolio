@@ -1,4 +1,4 @@
-import React, {ChangeEvent, FocusEvent, useState} from 'react';
+import React, {ChangeEvent, useState} from 'react';
 import styled from "styled-components";
 import {theme} from "../styles/theme";
 
@@ -6,6 +6,7 @@ interface IInputOwnType {
     idLabel: string
     placeholder: string
     type?: string
+    autoComplete?: string
 }
 
 
@@ -14,10 +15,11 @@ export const CustomInput = (props: IInputOwnType) => {
     const onChangeHandler = (e: ChangeEvent<HTMLInputElement>)=> setValue(e.target.value)
 
 
-    const {idLabel, placeholder,type} = props
+    const {idLabel, placeholder,type, autoComplete} = props
     return (
-        <ContainerInput isValue={hasValue} >
+        <ContainerInput isValue={hasValue}  >
             <Field
+                   autoComplete={autoComplete}
                    onChange={onChangeHandler}
                    value={hasValue}
                    type={type}
@@ -34,19 +36,16 @@ const ContainerInput = styled.div<{ isValue: string }>`
   position: relative;
   border: 2px solid #2a2626;
   
-  
   &:focus-within {
-    border: 1px solid orange;
-    label {
-      left: 6px;
-      top: -12px;
-    }
-    label:before {
-      opacity: 1;
-    }
-  }
- 
-
+       border: 1px solid orange;
+       label {
+         left: 6px;
+         top: -12px;
+       }
+       label:before {
+         opacity: 1;
+       }
+     }
 `
 
 const Field = styled.input`
@@ -76,6 +75,11 @@ const Field = styled.input`
     -webkit-background-clip: text;
     transition: background-color 5000s ease-in-out 0s;
     box-shadow: inset 0 0 20px 20px #23232329;
+
+    & ~ label {
+      left: 6px;
+      top: -12px;
+    }
   }
 `
 

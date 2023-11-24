@@ -11,10 +11,10 @@ export const Contact = () => {
         <StyledContacts>
             <ContainerBlock>
         <SectionTitle>Contacts</SectionTitle>
-            <StyledForm autoComplete= {'off'}>
-                <CustomInput  idLabel={'name'} placeholder={'Enter your name'} type={'name'} />
-                <CustomInput idLabel={'email'} placeholder={'Enter your email'} type={'email'}/>
-                <CustomInput idLabel={'message'} placeholder={'message'} type={'textarea'}/>
+            <StyledForm >
+                <CustomInput autoComplete= {'off'} idLabel={'name'} placeholder={'Enter your name'} type={'name'} />
+                <CustomInput  autoComplete= {'off'} idLabel={'email'} placeholder={'Enter your email'} type={'email'}/>
+                <CustomInput  autoComplete= {'off'} idLabel={'message'} placeholder={'message'} type={'textarea'}/>
                 <Button type={'submit'}>Send message</Button>
             </StyledForm>
             </ContainerBlock>
