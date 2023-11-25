@@ -39,6 +39,11 @@ export const GlobalStyle = createGlobalStyle`
       border: none;
     }
     
+    textarea {
+      padding: 0;
+      margin: 0;
+    }
+    
     p {
       font-family: Monofonto;
       color: #17c417;

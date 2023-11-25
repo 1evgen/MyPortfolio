@@ -1,13 +1,15 @@
-import React, {ChangeEvent, useState} from 'react';
+import React, {ChangeEvent, ElementType, useState} from 'react';
 import styled from "styled-components";
 import {theme} from "../styles/theme";
 
-interface IInputOwnType {
+interface IInputOwnType<T extends  ElementType = ElementType> {
     idLabel: string
     placeholder: string
     type?: string
     autoComplete?: string
+    as?: T
 }
+
 
 
 export const CustomInput = (props: IInputOwnType) => {
@@ -15,10 +17,11 @@ export const CustomInput = (props: IInputOwnType) => {
     const onChangeHandler = (e: ChangeEvent<HTMLInputElement>)=> setValue(e.target.value)
 
 
-    const {idLabel, placeholder,type, autoComplete} = props
+    const {idLabel, placeholder,type, autoComplete, as} = props
     return (
         <ContainerInput isValue={hasValue}  >
             <Field
+                   as={as}
                    autoComplete={autoComplete}
                    onChange={onChangeHandler}
                    value={hasValue}
@@ -33,6 +36,7 @@ export const CustomInput = (props: IInputOwnType) => {
 
 const ContainerInput = styled.div<{ isValue: string }>`
   width: 100%;
+  height: 100%;
   position: relative;
   border: 2px solid #2a2626;
   
@@ -57,6 +61,7 @@ const Field = styled.input`
   outline: none;
   color: ${theme.colors.font};
 
+ 
   
   &::placeholder {
     font-size: 16px;
