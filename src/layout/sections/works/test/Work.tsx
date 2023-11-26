@@ -16,7 +16,7 @@ export const  Work = (props: PropsType)=> {
                 <RightSide></RightSide>
                 <Title>{title}</Title>
                 <ButtonContainer>
-                    <Button id={'eye'} as={'a'} href={linkPreview} >
+                    <Button id={'eye'} as={'a'} href={linkPreview} target={'_blank'} >
                         <SVG stroke-width="1" stroke-linecap="round"
                               stroke-linejoin="round" width="20" stroke="red" height="20" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M6 6.85714C4.65058 6.85714 3.19828 6.30303 1.80011 5.25465C0.7549 4.47096 0.109782 3.69454 0.0828251 3.66182C-0.0276084 3.52794 -0.0276084 3.32921 0.0828251 3.1953C0.109782 3.16263 0.754873 2.38615 1.80011 1.60246C3.19831 0.554174 4.65061 0 6 0C7.34942 0 8.80175 0.554146 10.1999 1.60246C11.2451 2.38615 11.8902 3.1626 11.9172 3.1953C12.0276 3.32918 12.0276 3.52791 11.9172 3.66182C11.8902 3.69449 11.2451 4.47096 10.1999 5.25465C8.80175 6.303 7.34944 6.85714 6 6.85714ZM0.804579 3.4286C1.06546 3.70791 1.55782 4.19906 2.20791 4.6848C3.09914 5.35068 4.48048 6.14454 6 6.14454C7.51952 6.14454 8.90089 5.35068 9.79209 4.6848C10.4421 4.19915 10.9345 3.70794 11.1954 3.4286C10.9346 3.14929 10.4422 2.65814 9.79209 2.1724C8.90089 1.50649 7.51952 0.712656 6 0.712656C4.48048 0.712656 3.09914 1.50649 2.20791 2.1724C1.5579 2.65805 1.06551 3.1492 0.804579 3.4286Z" fill="black"/>
@@ -25,7 +25,7 @@ export const  Work = (props: PropsType)=> {
                         </SVG>
 
                     </Button>
-                    <Button id={'git'} as={'a'} href={linkGit}>
+                    <Button id={'git'} as={'a'} href={linkGit} target={'_blank'}>
                         <SVG id={'svg-git'} xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                              viewBox="0 0 24 24" fill="none" stroke="red" stroke-width="2" stroke-linecap="round"
                              stroke-linejoin="round">

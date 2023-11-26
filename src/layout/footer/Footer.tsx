@@ -7,17 +7,20 @@ export const Footer = () => {
     return (
         <StyledFooter>
             <FlexContainer direction={'column'} aline={'center'} >
-            <Name>Evgenii</Name>
+            {/*<Name>Evgenii</Name>*/}
             <SocialList>
                 <SocialItem>
                     <SocialItemLink>
-                        <Icon  viewBox={'0 0 21px 21px'} iconId={'git'} />
+                        <Test>
+                        <Icon  viewBox={'0 0 21px 21px'} iconId={'git'}  />
+                        </Test>
                     </SocialItemLink>
                     <SocialItemLink>
                         <Icon viewBox={'0 0 21px 21px'} iconId={'telegram'} />
                     </SocialItemLink>
                     <SocialItemLink>
                         <Icon  viewBox={'0 0 21px 21px'} iconId={'linkedin'} />
+
                     </SocialItemLink>
                 </SocialItem>
             </SocialList>
@@ -30,16 +33,19 @@ export const Footer = () => {
 };
 
 const StyledFooter = styled.footer`
-    background-color: blanchedalmond;
-    height: 30vh;
+  background-color:  #0c0c15;
+
+  padding: 10px 0px;
 `
 
-
-const  Name = styled.span`
-`
+//
+// const  Name = styled.span`
+//
+// `
 const SocialList = styled.ul`
-
-   
+  display: flex;
+  gap: 20px;
+  margin: 20px 0;  
 `
 const SocialItem = styled.li`
   display: flex;
@@ -50,3 +56,11 @@ const SocialItemLink = styled.a`
  const  Copyright = styled.small`
  
  `
+
+const Test = styled.div`
+  width: 34.1px;
+  height: 34.5px;
+  background-color: #fd3b00;
+  position: relative;
+  border-radius: 50%;
+`
