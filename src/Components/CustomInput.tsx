@@ -1,6 +1,7 @@
-import React, {ChangeEvent, ElementType, useState} from 'react';
+import React, {ChangeEvent, ComponentProps, ComponentPropsWithoutRef, ElementType, useState} from 'react';
 import styled from "styled-components";
 import {theme} from "../styles/theme";
+
 
 interface IInputOwnType<T extends  ElementType = ElementType> {
     idLabel: string
@@ -9,8 +10,6 @@ interface IInputOwnType<T extends  ElementType = ElementType> {
     autoComplete?: string
     as?: T
 }
-
-
 
 export const CustomInput = (props: IInputOwnType) => {
     const [hasValue, setValue] = useState('')
@@ -39,7 +38,7 @@ const ContainerInput = styled.div<{ isValue: string }>`
   height: 100%;
   position: relative;
   border: 2px solid #2a2626;
-  
+  background-color: #13181e;
   &:focus-within {
        border: 1px solid orange;
        label {

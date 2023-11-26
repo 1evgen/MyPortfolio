@@ -8,5 +8,5 @@ export const SectionTitle = styled.h2`
   -webkit-background-clip: text;
   text-shadow: 1px 1px 5px crimson;
   text-align: center;
-  margin: 20px 0;
+  margin: 30px 0;
 `

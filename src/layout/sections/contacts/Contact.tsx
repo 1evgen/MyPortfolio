@@ -4,12 +4,14 @@ import {SectionTitle} from "../../../Components/SectionTitle";
 import {Button} from "../../../Components/Button";
 import {ContainerBlock} from "../../../Components/Container";
 import {CustomInput} from "../../../Components/CustomInput";
+import {FlexContainer} from "../../../Components/FlexContainer";
 
 
 export const Contact = () => {
     return (
         <StyledContacts>
             <ContainerBlock>
+
         <SectionTitle>Contacts</SectionTitle>
             <StyledForm >
                 <CustomInput idLabel={'name'} placeholder={'Enter your name'} type={'name'} />
@@ -17,6 +19,7 @@ export const Contact = () => {
                 <CustomInput idLabel={'message'} placeholder={'message'} as={'textarea'}/>
                 <Button type={'submit'}>Send message</Button>
             </StyledForm>
+
             </ContainerBlock>
         </StyledContacts>
 
@@ -24,9 +27,10 @@ export const Contact = () => {
 };
 
 const StyledContacts = styled.section`
-  
-  
+    
 `
+
+
 
 const StyledForm = styled.form`
     max-width: 500px; 

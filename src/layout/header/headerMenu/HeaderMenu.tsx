@@ -100,9 +100,7 @@ const Link = styled.a<{ item: string }>`
       animation: none;
       display: none;
     }
-
     transition: color .5s, text-shadow 0.3s;
-
     color: #17c417;
     text-shadow: 2px 2px 10px #1d751d;
     
