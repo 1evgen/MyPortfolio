@@ -7,7 +7,7 @@ import {Contact} from "./layout/sections/contacts/Contact";
 import {Slogan} from "./layout/sections/slogan/Slogan";
 import {Footer} from "./layout/footer/Footer";
 import {AboutMe} from "./layout/sections/aboutMe/AboutMe";
-import {Work} from "./layout/sections/works/test/Work";
+
 
 
 function App() {

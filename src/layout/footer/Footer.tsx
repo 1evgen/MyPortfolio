@@ -51,10 +51,19 @@ const SocialItem = styled.li`
   display: flex;
   gap: 20px
 `
+
 const SocialItemLink = styled.a`
+  color: #fd3b00;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+  &:hover{
+    transform: translateY(-5px);
+    
+  }
 `
  const  Copyright = styled.small`
- 
+   color: #17c417;
+   text-shadow: 2px 2px 10px #1d751d;
  `
 
 const Test = styled.div`
