@@ -19,8 +19,12 @@ export const theme = {
         center: 'rgba(33, 23, 22, 0.85)',
         shadowFire: '0px 0px 10px #BD2100 inset',
         colorBody: 'rgb(62,66,66)'
-    }
+    },
 
+    media: {
+        tablet: "screen and (max-width: 768px)",
+        mobile: "screen and (max-width: 576px)"
+    }
 
 
 

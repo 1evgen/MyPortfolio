@@ -65,7 +65,7 @@ export const Skills = () => {
                            <Skill level={5} iconId={'storybook'} skillTitle={'Storybook'}
                            description={'I\'m very pleased to have had the opportunity to get acquainted with Storybook. ' +
                                'I consider it a very useful tool for documenting and testing components. ' +
-                               'I performed my first interactive test in Storybook, and it was a great experience. ' +
+                               'I performed my first interactive BackgroundElement in Storybook, and it was a great experience. ' +
                                'I also appreciate the active community that is always ready to provide guidance and help ' +
                                'with various questions related to working with this tool.'}/>
 

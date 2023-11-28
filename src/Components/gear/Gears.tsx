@@ -22,8 +22,16 @@ const ContainerGears = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  top: 3%;
+  //top: 3%;
+  //right: 90%;
+  top: 19%;
   right: 90%;
+  
+  // @media ${theme.media.tablet} {
+  //   top: 20%;
+  //   right: 50%;
+  // }
+  //
 `
 
 const rotateFirstGear = keyframes`

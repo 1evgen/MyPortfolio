@@ -1,11 +1,11 @@
 import styled, {css, keyframes} from "styled-components";
+import {theme} from "../../styles/theme";
 
 type PropsType = {
     width?: string
     height?: string
     isActive: boolean
 }
-
 
 export const HolographicDisplay = styled.div<PropsType>`
   position: relative;
@@ -47,6 +47,11 @@ export const HolographicDisplay = styled.div<PropsType>`
     height: 3%;
     background-color: #0c0c15;
   }
+  @media ${theme.media.tablet} {
+    display: flex;
+    flex-direction: column;
+  }
+
 `
 
 const effect = keyframes`
@@ -92,6 +97,8 @@ export const AdditionalDesign = styled.div<PropsType>`
     left: 2px;
     animation: ${({isActive})=> isActive ?  css`${effect} 0.8s infinite` : 'none'}
 
+
+    
 `
 
 

@@ -2,6 +2,7 @@ import React, {Children, ReactNode} from 'react';
 import styled, {keyframes} from "styled-components";
 import {Icon} from "../../../Components/icon/Icon";
 import {createGlitchKeyframes} from "../../../helper/helper";
+import {theme} from "../../../styles/theme";
 
 
 type PropsType = {
@@ -10,7 +11,6 @@ type PropsType = {
 
 export const HeaderMenu = ({menuItems}:PropsType) => {
     return (
-
         <StyleHeaderMenu>
             <OpenBracket>
             <Icon iconId={'OpenBracket'} />
@@ -25,8 +25,6 @@ export const HeaderMenu = ({menuItems}:PropsType) => {
 
 const StyleHeaderMenu = styled.nav`
   position: relative;
-
-  
     ul{
       display: flex;
       gap: 25px;
@@ -34,6 +32,11 @@ const StyleHeaderMenu = styled.nav`
       margin-right: 60px;
      
     }
+  
+  @media ${theme.media.tablet}{
+    display: none;
+  }
+  
   
 `
 

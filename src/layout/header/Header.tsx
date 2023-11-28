@@ -26,7 +26,7 @@ const StyleHeader = styled.header`
   background-color: #0c0c15;
   //border-bottom: 1px solid white;
   padding: 20px 0;
-  //position: fixed;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;

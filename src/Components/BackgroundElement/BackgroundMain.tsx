@@ -1,6 +1,7 @@
 import React from 'react';
 import binaryIcons from '../../accets/images/binarCode-sprite.svg'
 import styled, {css, keyframes} from "styled-components";
+import {theme} from "../../styles/theme";
 
 type PropsType = {
     iconId?: string
@@ -17,6 +18,7 @@ type PropsType = {
 
 
 export const BackgroundMain = ({iconId, width, height, viewBox, fill, rotate, left ,top, isActive}: PropsType) => {
+
     return (
 
 <BinaryNumber isActive={isActive} top={top}  left={ left} rotate={rotate}>
@@ -25,9 +27,9 @@ export const BackgroundMain = ({iconId, width, height, viewBox, fill, rotate, le
              viewBox={viewBox || "0 0 120 119"}
              fill={fill}
              xmlns="http://www.w3.org/2000/svg">
-              <use fill={fill} xlinkHref={`${binaryIcons}#${iconId}`}></use>
+             <use fill={fill} xlinkHref={`${binaryIcons}#${iconId}`}></use>
         </svg>
-</BinaryNumber>
+ </BinaryNumber>
     );
 };
 
@@ -75,5 +77,7 @@ const BinaryNumber = styled.div<PropsType>`
   z-index: 0;
   animation: ${props => props.isActive ? css`${rotateBackground} 10s linear 1 ` : 'none' };
   opacity: ${(props) => props.isActive ? '1' : '0'}
+  
+  
 `
 

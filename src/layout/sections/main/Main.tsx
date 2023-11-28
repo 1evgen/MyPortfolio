@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import styled from "styled-components";
 import avatar from '../../../accets/images/avatarMain.webp'
 import {FlexContainer} from "../../../Components/FlexContainer";
@@ -6,8 +6,9 @@ import {ContainerBlock} from "../../../Components/Container";
 import {Gears} from "../../../Components/gear/Gears";
 import {AdditionalDesign, HolographicDisplay} from "../../../Components/holographicDisplay/HolographicDisplay";
 import {SwitcherAnimation} from "../../../Components/switcher/SwitcherAnimation";
-import {BackgroundMain} from "../../../Components/test/BackgroundMain";
+import {BackgroundMain} from "../../../Components/BackgroundElement/BackgroundMain";
 import {EyeSvg} from "../../../accets/SVGComponent/EyeSvg";
+import {theme} from "../../../styles/theme";
 
 
 
@@ -25,7 +26,7 @@ const backgroundStyled = [
     {id: 10,letter: 'e', top: '65%', left: '14%', rotate: '28'},
     {id: 11, letter: 'u', top: '87%', left: '18%', rotate: '310'},
     {id: 12, letter: 'r', top: '57%', left: '2%', rotate: '70'},
-    { id: 13,letter: 'r', top: '22%', left: '15%', rotate: '267'},
+    {id: 13,letter: 'r', top: '22%', left: '15%', rotate: '267'},
     {id: 14,letter: 'r', top: '11%', left: '15%', rotate: '48deg'},
     {id: 15, letter: 's', top: '37%', left: '7%', rotate: '48deg'},
     {id: 16, letter: 's', top: '47%', left: '12%', rotate: '48deg'},
@@ -56,45 +57,54 @@ const backgroundStyled = [
 
 
 export const Main = () => {
-
     const [isActive, setActive] = useState(false)
     const onChangeAnimation = () => setActive(!isActive)
+    const [isMobile, setIsMobile] = useState(window.matchMedia("(max-width: 300px)").matches)
+
+    useEffect(() => {
+        const mediaQuery = window.matchMedia("(max-width: 760px)")
+        const checkIfMobile = () => setIsMobile(mediaQuery.matches)
+        mediaQuery.addListener(checkIfMobile)
+        return () => {
+            mediaQuery.removeListener(checkIfMobile)
+        }
+    }, [])
+
     return (
         <StyledMain>
             <ContainerBlock>
+                <FlexContainer position={'relative'} direction={'column'} justify={'center'} aline={'center'} height={'100vh'}>
+                    {!isMobile &&
+                        backgroundStyled.map((el) => (
+                            <BackgroundMain
+                                key={el.id}
+                                fill={'#124b00'}
+                                rotate={`${el.rotate}deg`}
+                                iconId={el.letter}
+                                isActive={isActive}
+                                top={el.top}
+                                left={el.left}
+                            />
+                        ))
+                    }
+                    <Gears isActive={isActive}/>
+                    <HolographicDisplay isActive={isActive}>
 
-            <FlexContainer  position={'relative'} direction={'column'} justify={'center'} aline={'center'} height={'100vh'}>
-                {
-                    backgroundStyled.map((el)=> <BackgroundMain
-                            key={el.id}
-                            fill={'#124b00'}
-                            rotate={`${el.rotate}deg`}
-                            iconId={el.letter}
-                            isActive={isActive}
-                            top={el.top}
-                            left={el.left}
-                        />
-                    )}
-                <Gears  isActive={isActive}/>
-                <HolographicDisplay isActive={isActive} >
-                    <AdditionalDesign isActive={isActive} >
-                        <SwitcherAnimation isActive={isActive} setAnimations={onChangeAnimation}></SwitcherAnimation>
-                    </AdditionalDesign>
-                    <FlexContainer  justify={'space-between'} aline={'center'}>
-                    <BoxMain>
-                        <SayHello>Hi, there. I am  Evgenii </SayHello>
-                        <MainTitle>I am Web developer</MainTitle>
-                    </BoxMain>
-                        <Photo src={avatar} alt='avatar'/>
-                        <WrapperPhotoElement >
-                             <EyeSvg isActive={isActive} />
-                        </WrapperPhotoElement>
-
-                    </FlexContainer>
-                </HolographicDisplay>
-
-            </FlexContainer>
-
+                        <FlexContainer justify={'space-between'} aline={'center'} wrap={'wrap'}>
+                            <AdditionalDesign isActive={isActive}>
+                                <SwitcherAnimation isActive={isActive} setAnimations={onChangeAnimation}></SwitcherAnimation>
+                            </AdditionalDesign>
+                            <BoxMain>
+                                <SayHello>Hi, there. I am  Evgenii </SayHello>
+                                <MainTitle>I am Web developer</MainTitle>
+                            </BoxMain>
+                            <Photo src={avatar} alt='avatar'/>
+                            <WrapperPhotoElement>
+                                <EyeSvg isActive={isActive} />
+                            </WrapperPhotoElement>
+                        </FlexContainer>
+                    </HolographicDisplay>
+                </FlexContainer>
             </ContainerBlock>
         </StyledMain>
     );
@@ -125,11 +135,18 @@ const BoxMain = styled.div`
 const MainTitle = styled.h1`
   font-family: GoodTime;
   font-size: 1.5rem;
+  @media ${theme.media.mobile} {
+    font-size: 1rem;
+  }
 `
 
 const SayHello = styled.span`
     font-family: GoodTime;
     font-size: 1rem;
+
+  @media ${theme.media.mobile} {
+    font-size: .8rem;
+  }
 `
 
 const WrapperPhotoElement =  styled.div`
@@ -140,16 +157,16 @@ const WrapperPhotoElement =  styled.div`
 
 `
 
-
-
-
 const Photo = styled.img`
   width: 200px;
   height: 200px;
   object-fit: cover;
   border: 2px solid #2f2f2f;
+  @media ${theme.media.mobile} {
+    width: 100px;
+    height: 100px;
 
-  
+  }
   
 `
 
