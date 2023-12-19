@@ -47,10 +47,26 @@ export const HolographicDisplay = styled.div<PropsType>`
     height: 3%;
     background-color: #0c0c15;
   }
-  @media ${theme.media.tablet} {
-    display: flex;
-    flex-direction: column;
+  
+  
+  @media screen and (max-width: 1035px) {
+    max-width: 40%;
+    height: 60%;
+    clip-path: none;
+    
+    &::after{
+      display: none;
+    }
+    &::before{
+      height: 100%;
+    }
   }
+
+  @media screen and (max-width: 580px) {
+    max-width: 60%;
+    height: 50%;
+  }
+
 
 `
 
@@ -70,7 +86,7 @@ export const AdditionalDesign = styled.div<PropsType>`
   justify-content: center;
   align-items: center;
 
-  
+
   background-color: rgba(72, 108, 72, 0.17);
   border: 1px solid rgb(115 124 0 / 60%);
   position: absolute;
@@ -80,6 +96,7 @@ export const AdditionalDesign = styled.div<PropsType>`
   top: 217px;
   left: 385px;
   height: 15%;
+
 
 
   &::after {
@@ -92,13 +109,19 @@ export const AdditionalDesign = styled.div<PropsType>`
     display: inline-block;
     border-radius: 50%;
     position: absolute;
-    
+
     top: 3px;
     left: 2px;
-    animation: ${({isActive})=> isActive ?  css`${effect} 0.8s infinite` : 'none'}
-
-
-    
+    animation: ${({isActive}) => isActive ? css`${effect} 0.8s infinite` : 'none'}
+  }
+  
+  
+  @media screen and (max-width: 1035px) {
+    display: none;
+    :after{
+     
+    }
+  }
 `
 
 

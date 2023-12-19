@@ -27,11 +27,10 @@ const ContainerGears = styled.div`
   top: 19%;
   right: 90%;
   
-  // @media ${theme.media.tablet} {
-  //   top: 20%;
-  //   right: 50%;
-  // }
-  //
+  @media screen and (max-width: 1035px) {
+   display: none;
+  }
+
 `
 
 const rotateFirstGear = keyframes`

@@ -62,7 +62,7 @@ export const Main = () => {
     const [isMobile, setIsMobile] = useState(window.matchMedia("(max-width: 300px)").matches)
 
     useEffect(() => {
-        const mediaQuery = window.matchMedia("(max-width: 760px)")
+        const mediaQuery = window.matchMedia("(max-width: 1035px)")
         const checkIfMobile = () => setIsMobile(mediaQuery.matches)
         mediaQuery.addListener(checkIfMobile)
         return () => {
@@ -90,7 +90,7 @@ export const Main = () => {
                     <Gears isActive={isActive}/>
                     <HolographicDisplay isActive={isActive}>
 
-                        <FlexContainer justify={'space-between'} aline={'center'} wrap={'wrap'}>
+                        <LocalFlexWrapper  >
                             <AdditionalDesign isActive={isActive}>
                                 <SwitcherAnimation isActive={isActive} setAnimations={onChangeAnimation}></SwitcherAnimation>
                             </AdditionalDesign>
@@ -102,7 +102,7 @@ export const Main = () => {
                             <WrapperPhotoElement>
                                 <EyeSvg isActive={isActive} />
                             </WrapperPhotoElement>
-                        </FlexContainer>
+                        </LocalFlexWrapper>
                     </HolographicDisplay>
                 </FlexContainer>
             </ContainerBlock>
@@ -118,6 +118,23 @@ const StyledMain = styled.div`
   position: relative;
 `
 
+const LocalFlexWrapper = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  
+  @media screen and (max-width: 1035px){
+    justify-content: center;
+    height: 100%;
+    flex-direction: column-reverse;
+    gap: 50px;
+  }
+  
+  
+`
+
+
 
 const BoxMain = styled.div`
   background-image: linear-gradient(orange,orangered);
@@ -128,24 +145,50 @@ const BoxMain = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 25px
+  gap: 25px;
+
+  @media screen and (max-width: 1035px) {
+    align-items: center;
+    justify-content: center;
+}
+  
+  
 `
 
 
 const MainTitle = styled.h1`
   font-family: GoodTime;
   font-size: 1.5rem;
-  @media ${theme.media.mobile} {
-    font-size: 1rem;
+  @media screen and (max-width: 1160px) {
+      font-size: 1.2rem;
   }
+  @media screen and (max-width: 780px){
+      font-size: 1rem;
+  }
+  @media screen and (max-width: 670px){
+    font-size: 0.8rem;
+  }
+  @media screen and (max-width: 380px){
+    font-size: 0.7rem;
+  }
+  
 `
 
 const SayHello = styled.span`
     font-family: GoodTime;
     font-size: 1rem;
-
-  @media ${theme.media.mobile} {
-    font-size: .8rem;
+  
+  @media screen and (max-width: 1160px) {
+    font-size: 0.8rem;
+  }
+  @media screen and (max-width: 780px){
+    font-size: 0.7rem;
+  }
+  @media screen and (max-width: 670px){
+    font-size: 0.6rem;
+  }
+  @media screen and (max-width: 380px){
+    font-size: 0.5rem;
   }
 `
 
@@ -153,6 +196,9 @@ const WrapperPhotoElement =  styled.div`
   position: absolute;
   left: 83.8%;
   top: 28%;
+  @media screen and (max-width: 1135px) {
+   display: none;
+  }
   
 
 `
@@ -162,10 +208,10 @@ const Photo = styled.img`
   height: 200px;
   object-fit: cover;
   border: 2px solid #2f2f2f;
-  @media ${theme.media.mobile} {
-    width: 100px;
-    height: 100px;
 
+  @media screen and (max-width: 650px) {
+    width: 150px;
+    height: 150px;
   }
   
 `
