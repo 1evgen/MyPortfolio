@@ -13,9 +13,8 @@ export const AboutMe = () => {
 
         <ContainerBlock>
             <SectionTitle>About me</SectionTitle>
-            <FlexContainer direction={'column'} justify={'center'} aline={'center'} height={'75vh'} gap={'30px'}>
-
-                <WrapperDisplay>
+            <FlexContainer direction={'column'} wrap={'wrap'} justify={'center'} aline={'center'} height={'75vh'} gap={'30px'}>
+                <WrapperDisplay >
         <ContentAboutMe>
         I am a motivated front-end developer, passionately dedicated to the world of web technologies.
         My passion for creating beautiful and interactive user interfaces has led me to front-end development,
@@ -39,6 +38,22 @@ const WrapperDisplay = styled.div`
   max-width: 600px;
   min-width: 200px;
   border: 2px solid #f88a0e;
+
+  @media screen and (max-width: 845px){
+    max-width: 500px;
+  }
+  
+  @media screen and (max-width: 690px){
+    max-width: 400px;
+  }
+
+  @media screen and (max-width: 540px){
+    max-width: 300px;
+  }
+
+  @media screen and (max-width: 520px){
+    max-width: 290px;
+  }
 
 
   border-image: linear-gradient(to right bottom, orangered, deepskyblue);
@@ -66,6 +81,17 @@ const WrapperDisplay = styled.div`
       -4px -3px 3px #d57042,
       -5px -4px 4px #fd3b00,
       -6px -5px 5px #fd3b00;
+    @media screen and (max-width: 750px){
+      top: 0%;
+    }
+
+    @media screen and (max-width: 690px){
+      top: -0.7%;
+    }
+    @media screen and (max-width: 520px){
+      top: 0%;
+    }
+    
   }
 
   &::before {
@@ -84,6 +110,11 @@ const WrapperDisplay = styled.div`
     4px 3px 3px #12fde2,
     5px 4px 4px deepskyblue,
     6px 5px 5px #0089b6;
+
+
+    @media screen and (max-width: 600px){
+      top:  90%;
+    }
   }
 
 `
@@ -113,9 +144,19 @@ const ContentAboutMe = styled.div`
     left: -4.2%;
     border-left: 2px solid;
     border-top: 2px solid;
-    
+
+    @media screen and (max-width: 750px){
+      top: -7%;
+    }
+    @media screen and (max-width: 600px){
+      top: -6%;
+    }
+    @media screen and (max-width: 520px){
+      top: -4%;
+      left: -6%;
+    }
   }
-  
+
   &::before {
     content: '';
     width: 5.3%;
@@ -126,6 +167,11 @@ const ContentAboutMe = styled.div`
     right: -4.3%;
     border-right: 2px solid deepskyblue;
     border-bottom: 2px solid deepskyblue;
-    
+
+    @media screen and (max-width: 600px){
+      top:  92.5%;
+      right: -5.9%; 
+    }
   }
+  
 `

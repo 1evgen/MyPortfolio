@@ -9,4 +9,8 @@ export const SectionTitle = styled.h2`
   text-shadow: 1px 1px 5px crimson;
   text-align: center;
   margin: 30px 0;
+
+  @media screen and (max-width: 750px){
+    margin: 20px 0;
+  }
 `
