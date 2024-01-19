@@ -45,7 +45,8 @@ const StyledFooter = styled.footer`
 const SocialList = styled.ul`
   display: flex;
   gap: 20px;
-  margin: 20px 0;  
+  margin: 20px 0;
+  cursor: pointer;
 `
 const SocialItem = styled.li`
   display: flex;

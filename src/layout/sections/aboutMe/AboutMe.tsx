@@ -88,7 +88,7 @@ const WrapperDisplay = styled.div`
     @media screen and (max-width: 690px){
       top: -0.7%;
     }
-    @media screen and (max-width: 520px){
+    @media screen and (max-width: 540px){
       top: 0%;
     }
     
@@ -111,7 +111,7 @@ const WrapperDisplay = styled.div`
     5px 4px 4px deepskyblue,
     6px 5px 5px #0089b6;
 
-
+    
     @media screen and (max-width: 600px){
       top:  90%;
     }
@@ -148,10 +148,13 @@ const ContentAboutMe = styled.div`
     @media screen and (max-width: 750px){
       top: -7%;
     }
+    @media screen and (max-width: 690px){
+      top: -6%;
+    }
     @media screen and (max-width: 600px){
       top: -6%;
     }
-    @media screen and (max-width: 520px){
+    @media screen and (max-width: 540px){
       top: -4%;
       left: -6%;
     }
@@ -168,10 +171,17 @@ const ContentAboutMe = styled.div`
     border-right: 2px solid deepskyblue;
     border-bottom: 2px solid deepskyblue;
 
-    @media screen and (max-width: 600px){
-      top:  92.5%;
-      right: -5.9%; 
+    @media screen and (max-width: 690px){
+      top:  95%;
+      right: -4.9%;
     }
+    
+    @media screen and (max-width: 540px){
+      top:  92.5%;
+      right: -6.9%; 
+    }
+
+   
   }
   
 `
