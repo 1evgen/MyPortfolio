@@ -21,8 +21,6 @@ function App() {
                 <Contact />
                 <Slogan />
                 <Footer />
-
-
         </div>
     );
 }
