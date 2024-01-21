@@ -15,8 +15,7 @@ type SkillPropsType = {
 export const Skill = ({iconId, skillTitle,description, level}: SkillPropsType) => {
     return (
         <StyledSkill>
-            <FlexContainer justify={'space-between'} aline={'center'}>
-
+            <SkillContainer   justify={'space-between'} aline={'center'}>
             <FlexContainer direction={'column-reverse'} justify={'space-between'} aline={'flex-start'} gap={'40px'} >
                 <SkillTitle>{skillTitle}</SkillTitle>
             <DisplayLevels level={level} >
@@ -28,10 +27,15 @@ export const Skill = ({iconId, skillTitle,description, level}: SkillPropsType) =
             <SkillText>{description}</SkillText>
             </WindowInfo>
 
-            </FlexContainer>
+            </SkillContainer>
         </StyledSkill>
     );
 };
+
+
+const SkillContainer = styled(FlexContainer)`
+    width: 100%;
+`
 
 export const StyledSkill = styled.div`
   width: 44%;
@@ -43,7 +47,24 @@ export const StyledSkill = styled.div`
   padding: 10px;
   position: relative;
   overflow: hidden;
+
+  @media screen and (max-width: 800px){
+    width: 70%;
+  }
+
+  @media screen and (max-width: 630px){
+    width: 80%;
+  }
+
+  @media screen and (max-width: 550px){
+    width: 90%;
+  }
   
+  @media screen and (max-width: 430px){
+    width: 100%;
+  }
+
+
   &::before {
     content: '';
     position: absolute;
@@ -74,6 +95,8 @@ const WindowInfo = styled.div`
   padding: 20px;
   max-width: 290px;
 
+  
+  
   &::-webkit-scrollbar {
     width: 3px;
   }
@@ -99,7 +122,7 @@ export const SkillText = styled.p`
   white-space: pre-line;
   word-break: break-word;
   hyphens: auto;
-
+  margin: 0;
 
 `
 

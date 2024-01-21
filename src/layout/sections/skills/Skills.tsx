@@ -34,26 +34,30 @@ const  infoSkill: InfoSkillType[] = [
 export const Skills = () => {
     return (
         <StyledSkills>
-            <ContainerBlock>
+            <ContainerBlock >
                 <SectionTitle>My skills</SectionTitle>
-            <FlexContainer wrap={'wrap'} justify={'space-around'} aline={'centre'} >
+            <FlexContainerStyled  wrap={'wrap'} justify={'space-around'} aline={'centre'} >
                 {
-                    infoSkill.map((s)=> (
-                        <Skill iconId={s.iconId} skillTitle={s.skillTitle} description={s.description} level={s.level} />
+                    infoSkill.map((s, index)=> (
+                        <Skill key={index} iconId={s.iconId} skillTitle={s.skillTitle} description={s.description} level={s.level} />
                     ))
                 }
-
-            </FlexContainer>
+            </FlexContainerStyled>
             </ContainerBlock>
         </StyledSkills>
     );
 };
 
 
-
-
 const StyledSkills = styled.section`
   background-color: #0c0c15;
   min-height: 100vh;
- 
+  
 `
+
+export const FlexContainerStyled = styled(FlexContainer)`
+  @media (max-width: 800px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }`
