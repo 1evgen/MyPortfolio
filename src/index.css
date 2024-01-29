@@ -4,6 +4,7 @@
        url("/src/accets/fonts/GoodTimesRg-Regular.ttf") format('truetype'),
        url("/src/accets/fonts/GoodTimesRg-Regular.woff2") format('woff2');
        font-style: normal;
+        font-display: swap;
 }
 
 @font-face {
@@ -11,4 +12,6 @@
     src: url("/src/accets/fonts/Monofonto-Regular.ttf") format('truetype'),
     url("/src/accets/fonts/Monofonto-Regular.woff2") format('woff2');
     font-style: normal;
+    font-display: swap;
+
 }
